@@ -1,0 +1,48 @@
+C:\Users\kesha\Desktop\Blood Bank Managemant System\Blood Bank Managemant System\Blood Bank Managemant System\bin\Debug\Blood Bank Managemant System.exe.config
+C:\Users\kesha\Desktop\Blood Bank Managemant System\Blood Bank Managemant System\Blood Bank Managemant System\bin\Debug\Blood Bank Managemant System.exe
+C:\Users\kesha\Desktop\Blood Bank Managemant System\Blood Bank Managemant System\Blood Bank Managemant System\bin\Debug\Blood Bank Managemant System.pdb
+C:\Users\kesha\Desktop\Blood Bank Managemant System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.csproj.AssemblyReference.cache
+C:\Users\kesha\Desktop\Blood Bank Managemant System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Properties.Resources.resources
+C:\Users\kesha\Desktop\Blood Bank Managemant System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.csproj.GenerateResource.cache
+C:\Users\kesha\Desktop\Blood Bank Managemant System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.csproj.CoreCompileInputs.cache
+C:\Users\kesha\Desktop\Blood Bank Managemant System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.exe
+C:\Users\kesha\Desktop\Blood Bank Managemant System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.pdb
+C:\Users\kesha\Desktop\Blood Bank Managemant System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.exe.config
+C:\Users\kesha\Desktop\Blood Bank Managemant System\Blood Bank Managemant System\Blood Bank Managemant System\bin\Debug\Guna.UI2.dll
+C:\Users\kesha\Desktop\Blood Bank Managemant System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Splash.resources
+C:\Users\kesha\Desktop\Blood Bank Managemant System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Ba.09B79CBA.Up2Date
+C:\Users\kesha\Desktop\Blood Bank Managemant System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Login.resources
+C:\Users\kesha\Desktop\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\bin\Debug\Blood Bank Managemant System.exe.config
+C:\Users\kesha\Desktop\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\bin\Debug\Blood Bank Managemant System.exe
+C:\Users\kesha\Desktop\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\bin\Debug\Blood Bank Managemant System.pdb
+C:\Users\kesha\Desktop\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\bin\Debug\Guna.UI2.dll
+C:\Users\kesha\Desktop\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.csproj.AssemblyReference.cache
+C:\Users\kesha\Desktop\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.exe.config
+C:\Users\kesha\Desktop\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Login.resources
+C:\Users\kesha\Desktop\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Splash.resources
+C:\Users\kesha\Desktop\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Properties.Resources.resources
+C:\Users\kesha\Desktop\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.csproj.GenerateResource.cache
+C:\Users\kesha\Desktop\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.csproj.CoreCompileInputs.cache
+C:\Users\kesha\Desktop\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Ba.09B79CBA.Up2Date
+C:\Users\kesha\Desktop\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.exe
+C:\Users\kesha\Desktop\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.pdb
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\bin\Debug\Blood Bank Managemant System.exe.config
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\bin\Debug\Blood Bank Managemant System.exe
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\bin\Debug\Blood Bank Managemant System.pdb
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\bin\Debug\Guna.UI2.dll
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.csproj.AssemblyReference.cache
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.exe.config
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Login.resources
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.MainForm.resources
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Splash.resources
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Properties.Resources.resources
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.csproj.GenerateResource.cache
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.csproj.CoreCompileInputs.cache
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Ba.09B79CBA.Up2Date
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.exe
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.pdb
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Donor.resources
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.ViewDonor.resources
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.AdminLogin.resources
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Employees.resources
+E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Patient.resources
