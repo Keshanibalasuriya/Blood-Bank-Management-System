@@ -30,23 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Transfers));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.logoutBtn = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.dashboard = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.bloodstock = new System.Windows.Forms.Label();
+            this.viewpatient = new System.Windows.Forms.Label();
+            this.patient = new System.Windows.Forms.Label();
+            this.viewdonors = new System.Windows.Forms.Label();
+            this.donor = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.Pid_ComboBox = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pNametxt = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.bloodGrptxt = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -57,32 +57,32 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Crimson;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.logoutBtn);
             this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.dashboard);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.bloodstock);
+            this.panel1.Controls.Add(this.viewpatient);
+            this.panel1.Controls.Add(this.patient);
+            this.panel1.Controls.Add(this.viewdonors);
+            this.panel1.Controls.Add(this.donor);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(264, 758);
             this.panel1.TabIndex = 1;
             // 
-            // button1
+            // logoutBtn
             // 
-            this.button1.Font = new System.Drawing.Font("Century Schoolbook", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Crimson;
-            this.button1.Location = new System.Drawing.Point(12, 681);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(238, 65);
-            this.button1.TabIndex = 12;
-            this.button1.Text = " Logout";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.logoutBtn.Font = new System.Drawing.Font("Century Schoolbook", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutBtn.ForeColor = System.Drawing.Color.Crimson;
+            this.logoutBtn.Location = new System.Drawing.Point(12, 681);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(238, 65);
+            this.logoutBtn.TabIndex = 12;
+            this.logoutBtn.Text = " Logout";
+            this.logoutBtn.UseVisualStyleBackColor = true;
+            this.logoutBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel7
             // 
@@ -92,17 +92,17 @@
             this.panel7.Size = new System.Drawing.Size(19, 43);
             this.panel7.TabIndex = 13;
             // 
-            // label8
+            // dashboard
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Crimson;
-            this.label8.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(46, 616);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(178, 34);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "DashBoard";
+            this.dashboard.AutoSize = true;
+            this.dashboard.BackColor = System.Drawing.Color.Crimson;
+            this.dashboard.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboard.ForeColor = System.Drawing.Color.White;
+            this.dashboard.Location = new System.Drawing.Point(46, 616);
+            this.dashboard.Name = "dashboard";
+            this.dashboard.Size = new System.Drawing.Size(178, 34);
+            this.dashboard.TabIndex = 10;
+            this.dashboard.Text = "DashBoard";
             // 
             // label7
             // 
@@ -116,65 +116,66 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Transfers";
             // 
-            // label6
+            // bloodstock
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Crimson;
-            this.label6.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(41, 400);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(199, 34);
-            this.label6.TabIndex = 8;
-            this.label6.Text = " Blood Stock";
+            this.bloodstock.AutoSize = true;
+            this.bloodstock.BackColor = System.Drawing.Color.Crimson;
+            this.bloodstock.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bloodstock.ForeColor = System.Drawing.Color.White;
+            this.bloodstock.Location = new System.Drawing.Point(41, 400);
+            this.bloodstock.Name = "bloodstock";
+            this.bloodstock.Size = new System.Drawing.Size(199, 34);
+            this.bloodstock.TabIndex = 8;
+            this.bloodstock.Text = " Blood Stock";
             // 
-            // label4
+            // viewpatient
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Crimson;
-            this.label4.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(41, 325);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(216, 34);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "View Patients";
+            this.viewpatient.AutoSize = true;
+            this.viewpatient.BackColor = System.Drawing.Color.Crimson;
+            this.viewpatient.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewpatient.ForeColor = System.Drawing.Color.White;
+            this.viewpatient.Location = new System.Drawing.Point(41, 325);
+            this.viewpatient.Name = "viewpatient";
+            this.viewpatient.Size = new System.Drawing.Size(216, 34);
+            this.viewpatient.TabIndex = 7;
+            this.viewpatient.Text = "View Patients";
             // 
-            // label5
+            // patient
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Crimson;
-            this.label5.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(38, 256);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 34);
-            this.label5.TabIndex = 6;
-            this.label5.Text = " Patient";
+            this.patient.AutoSize = true;
+            this.patient.BackColor = System.Drawing.Color.Crimson;
+            this.patient.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patient.ForeColor = System.Drawing.Color.White;
+            this.patient.Location = new System.Drawing.Point(38, 256);
+            this.patient.Name = "patient";
+            this.patient.Size = new System.Drawing.Size(130, 34);
+            this.patient.TabIndex = 6;
+            this.patient.Text = " Patient";
             // 
-            // label3
+            // viewdonors
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Crimson;
-            this.label3.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(38, 186);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 34);
-            this.label3.TabIndex = 5;
-            this.label3.Text = " View Donors";
+            this.viewdonors.AutoSize = true;
+            this.viewdonors.BackColor = System.Drawing.Color.Crimson;
+            this.viewdonors.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewdonors.ForeColor = System.Drawing.Color.White;
+            this.viewdonors.Location = new System.Drawing.Point(38, 186);
+            this.viewdonors.Name = "viewdonors";
+            this.viewdonors.Size = new System.Drawing.Size(208, 34);
+            this.viewdonors.TabIndex = 5;
+            this.viewdonors.Text = " View Donors";
+            this.viewdonors.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label2
+            // donor
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Crimson;
-            this.label2.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(39, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 34);
-            this.label2.TabIndex = 4;
-            this.label2.Text = " Doner";
+            this.donor.AutoSize = true;
+            this.donor.BackColor = System.Drawing.Color.Crimson;
+            this.donor.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.donor.ForeColor = System.Drawing.Color.White;
+            this.donor.Location = new System.Drawing.Point(39, 120);
+            this.donor.Name = "donor";
+            this.donor.Size = new System.Drawing.Size(114, 34);
+            this.donor.TabIndex = 4;
+            this.donor.Text = " Donor";
             // 
             // flowLayoutPanel1
             // 
@@ -210,14 +211,15 @@
             this.Pid_ComboBox.Name = "Pid_ComboBox";
             this.Pid_ComboBox.Size = new System.Drawing.Size(169, 24);
             this.Pid_ComboBox.TabIndex = 26;
+            this.Pid_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Pid_ComboBox_SelectedIndexChanged);
             // 
-            // textBox1
+            // pNametxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(681, 376);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 31);
-            this.textBox1.TabIndex = 27;
+            this.pNametxt.Location = new System.Drawing.Point(681, 376);
+            this.pNametxt.Multiline = true;
+            this.pNametxt.Name = "pNametxt";
+            this.pNametxt.Size = new System.Drawing.Size(233, 31);
+            this.pNametxt.TabIndex = 27;
             // 
             // label9
             // 
@@ -252,13 +254,13 @@
             this.label11.TabIndex = 32;
             this.label11.Text = "Blood Group";
             // 
-            // textBox2
+            // bloodGrptxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(1017, 376);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(233, 31);
-            this.textBox2.TabIndex = 33;
+            this.bloodGrptxt.Location = new System.Drawing.Point(1017, 376);
+            this.bloodGrptxt.Multiline = true;
+            this.bloodGrptxt.Name = "bloodGrptxt";
+            this.bloodGrptxt.Size = new System.Drawing.Size(233, 31);
+            this.bloodGrptxt.TabIndex = 33;
             // 
             // label12
             // 
@@ -267,7 +269,7 @@
             this.label12.ForeColor = System.Drawing.Color.Crimson;
             this.label12.Location = new System.Drawing.Point(704, 55);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(302, 40);
+            this.label12.Size = new System.Drawing.Size(293, 39);
             this.label12.TabIndex = 34;
             this.label12.Text = "Blood Transfers";
             // 
@@ -288,11 +290,11 @@
             this.ClientSize = new System.Drawing.Size(1380, 758);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.bloodGrptxt);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pNametxt);
             this.Controls.Add(this.Pid_ComboBox);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
@@ -313,23 +315,23 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button logoutBtn;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label dashboard;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label bloodstock;
+        private System.Windows.Forms.Label viewpatient;
+        private System.Windows.Forms.Label patient;
+        private System.Windows.Forms.Label viewdonors;
+        private System.Windows.Forms.Label donor;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox Pid_ComboBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox pNametxt;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox bloodGrptxt;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

@@ -26,5 +26,15 @@ namespace Blood_Bank_Managemant_System
         {
 
         }
+
+        private void Pid_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
