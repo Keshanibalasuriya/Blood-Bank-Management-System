@@ -16,5 +16,15 @@ namespace Blood_Bank_Managemant_System
         {
             InitializeComponent();
         }
+
+        private void Transfers_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
