@@ -217,6 +217,7 @@
             this.NameTxt.Name = "NameTxt";
             this.NameTxt.Size = new System.Drawing.Size(431, 29);
             this.NameTxt.TabIndex = 3;
+            this.NameTxt.TextChanged += new System.EventHandler(this.NameTxt_TextChanged);
             // 
             // label9
             // 

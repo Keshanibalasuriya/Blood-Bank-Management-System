@@ -169,6 +169,11 @@ namespace Blood_Bank_Managemant_System
         {
 
         }
+
+        private void NameTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
     }
