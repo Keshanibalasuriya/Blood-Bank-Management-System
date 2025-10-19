@@ -1,6 +1,6 @@
 ﻿namespace Blood_Bank_Managemant_System
 {
-    partial class Transfers
+    partial class transfer_btn
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Transfers));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(transfer_btn));
             this.panel1 = new System.Windows.Forms.Panel();
             this.logoutBtn = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dashboard = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.transfer = new System.Windows.Forms.Label();
             this.bloodstock = new System.Windows.Forms.Label();
             this.viewpatient = new System.Windows.Forms.Label();
             this.patient = new System.Windows.Forms.Label();
@@ -49,6 +49,8 @@
             this.bloodGrptxt = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.transferbtn = new System.Windows.Forms.Button();
+            this.stockStatus = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,7 +62,7 @@
             this.panel1.Controls.Add(this.logoutBtn);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.dashboard);
-            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.transfer);
             this.panel1.Controls.Add(this.bloodstock);
             this.panel1.Controls.Add(this.viewpatient);
             this.panel1.Controls.Add(this.patient);
@@ -82,7 +84,6 @@
             this.logoutBtn.TabIndex = 12;
             this.logoutBtn.Text = " Logout";
             this.logoutBtn.UseVisualStyleBackColor = true;
-            this.logoutBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel7
             // 
@@ -103,18 +104,20 @@
             this.dashboard.Size = new System.Drawing.Size(178, 34);
             this.dashboard.TabIndex = 10;
             this.dashboard.Text = "DashBoard";
+            this.dashboard.Click += new System.EventHandler(this.dashboard_Click);
             // 
-            // label7
+            // transfer
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Crimson;
-            this.label7.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(46, 468);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(156, 34);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Transfers";
+            this.transfer.AutoSize = true;
+            this.transfer.BackColor = System.Drawing.Color.Crimson;
+            this.transfer.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transfer.ForeColor = System.Drawing.Color.White;
+            this.transfer.Location = new System.Drawing.Point(46, 468);
+            this.transfer.Name = "transfer";
+            this.transfer.Size = new System.Drawing.Size(156, 34);
+            this.transfer.TabIndex = 9;
+            this.transfer.Text = "Transfers";
+            this.transfer.Click += new System.EventHandler(this.transfer_Click);
             // 
             // bloodstock
             // 
@@ -127,6 +130,7 @@
             this.bloodstock.Size = new System.Drawing.Size(199, 34);
             this.bloodstock.TabIndex = 8;
             this.bloodstock.Text = " Blood Stock";
+            this.bloodstock.Click += new System.EventHandler(this.bloodstock_Click);
             // 
             // viewpatient
             // 
@@ -139,6 +143,7 @@
             this.viewpatient.Size = new System.Drawing.Size(216, 34);
             this.viewpatient.TabIndex = 7;
             this.viewpatient.Text = "View Patients";
+            this.viewpatient.Click += new System.EventHandler(this.viewpatient_Click);
             // 
             // patient
             // 
@@ -151,6 +156,7 @@
             this.patient.Size = new System.Drawing.Size(130, 34);
             this.patient.TabIndex = 6;
             this.patient.Text = " Patient";
+            this.patient.Click += new System.EventHandler(this.patient_Click);
             // 
             // viewdonors
             // 
@@ -163,7 +169,7 @@
             this.viewdonors.Size = new System.Drawing.Size(208, 34);
             this.viewdonors.TabIndex = 5;
             this.viewdonors.Text = " View Donors";
-            this.viewdonors.Click += new System.EventHandler(this.label3_Click);
+            this.viewdonors.Click += new System.EventHandler(this.viewdonors_Click);
             // 
             // donor
             // 
@@ -176,6 +182,7 @@
             this.donor.Size = new System.Drawing.Size(114, 34);
             this.donor.TabIndex = 4;
             this.donor.Text = " Donor";
+            this.donor.Click += new System.EventHandler(this.donor_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -201,13 +208,9 @@
             // 
             // Pid_ComboBox
             // 
+            this.Pid_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Pid_ComboBox.FormattingEnabled = true;
-            this.Pid_ComboBox.Items.AddRange(new object[] {
-            "P001",
-            "P002",
-            "P003",
-            "P004"});
-            this.Pid_ComboBox.Location = new System.Drawing.Point(364, 376);
+            this.Pid_ComboBox.Location = new System.Drawing.Point(357, 378);
             this.Pid_ComboBox.Name = "Pid_ComboBox";
             this.Pid_ComboBox.Size = new System.Drawing.Size(169, 24);
             this.Pid_ComboBox.TabIndex = 26;
@@ -215,7 +218,7 @@
             // 
             // pNametxt
             // 
-            this.pNametxt.Location = new System.Drawing.Point(681, 376);
+            this.pNametxt.Location = new System.Drawing.Point(664, 376);
             this.pNametxt.Multiline = true;
             this.pNametxt.Name = "pNametxt";
             this.pNametxt.Size = new System.Drawing.Size(233, 31);
@@ -226,7 +229,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Crimson;
-            this.label9.Location = new System.Drawing.Point(705, 327);
+            this.label9.Location = new System.Drawing.Point(690, 329);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(176, 27);
             this.label9.TabIndex = 30;
@@ -237,7 +240,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Crimson;
-            this.label10.Location = new System.Drawing.Point(379, 327);
+            this.label10.Location = new System.Drawing.Point(375, 334);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(137, 27);
             this.label10.TabIndex = 31;
@@ -248,7 +251,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Crimson;
-            this.label11.Location = new System.Drawing.Point(1047, 334);
+            this.label11.Location = new System.Drawing.Point(1076, 334);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(164, 27);
             this.label11.TabIndex = 32;
@@ -256,7 +259,7 @@
             // 
             // bloodGrptxt
             // 
-            this.bloodGrptxt.Location = new System.Drawing.Point(1017, 376);
+            this.bloodGrptxt.Location = new System.Drawing.Point(1046, 376);
             this.bloodGrptxt.Multiline = true;
             this.bloodGrptxt.Name = "bloodGrptxt";
             this.bloodGrptxt.Size = new System.Drawing.Size(233, 31);
@@ -267,7 +270,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Schoolbook", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Crimson;
-            this.label12.Location = new System.Drawing.Point(704, 55);
+            this.label12.Location = new System.Drawing.Point(657, 68);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(293, 39);
             this.label12.TabIndex = 34;
@@ -276,18 +279,45 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(819, 110);
+            this.pictureBox1.Location = new System.Drawing.Point(760, 120);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(78, 75);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
             // 
-            // Transfers
+            // transferbtn
+            // 
+            this.transferbtn.BackColor = System.Drawing.Color.LimeGreen;
+            this.transferbtn.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transferbtn.ForeColor = System.Drawing.Color.White;
+            this.transferbtn.Location = new System.Drawing.Point(651, 609);
+            this.transferbtn.Name = "transferbtn";
+            this.transferbtn.Size = new System.Drawing.Size(301, 46);
+            this.transferbtn.TabIndex = 36;
+            this.transferbtn.TabStop = false;
+            this.transferbtn.Text = "Transfer";
+            this.transferbtn.UseVisualStyleBackColor = false;
+            this.transferbtn.Click += new System.EventHandler(this.transferbtn_Click);
+            // 
+            // stockStatus
+            // 
+            this.stockStatus.AutoSize = true;
+            this.stockStatus.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stockStatus.ForeColor = System.Drawing.Color.Crimson;
+            this.stockStatus.Location = new System.Drawing.Point(690, 567);
+            this.stockStatus.Name = "stockStatus";
+            this.stockStatus.Size = new System.Drawing.Size(207, 27);
+            this.stockStatus.TabIndex = 37;
+            this.stockStatus.Text = "Available or Not";
+            // 
+            // transfer_btn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1380, 758);
+            this.Controls.Add(this.stockStatus);
+            this.Controls.Add(this.transferbtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.bloodGrptxt);
@@ -299,9 +329,10 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Transfers";
-            this.Text = "Transfers";
-            this.Load += new System.EventHandler(this.Transfers_Load);
+            this.Name = "transfer_btn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Transfer";
+            this.Load += new System.EventHandler(this.transfer_btn_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -318,7 +349,7 @@
         private System.Windows.Forms.Button logoutBtn;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label dashboard;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label transfer;
         private System.Windows.Forms.Label bloodstock;
         private System.Windows.Forms.Label viewpatient;
         private System.Windows.Forms.Label patient;
@@ -334,5 +365,7 @@
         private System.Windows.Forms.TextBox bloodGrptxt;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button transferbtn;
+        private System.Windows.Forms.Label stockStatus;
     }
 }
