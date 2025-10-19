@@ -118,5 +118,10 @@ namespace Blood_Bank_Managemant_System
                 }
             }
         }
+
+        private void Patient_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

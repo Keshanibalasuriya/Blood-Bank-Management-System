@@ -45,23 +45,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.Paddress = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Page = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Pname = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Pgender = new System.Windows.Forms.ComboBox();
+            this.ViewpatienGV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.BloodGroupCmb = new System.Windows.Forms.ComboBox();
-            this.PPhone = new System.Windows.Forms.TextBox();
+            this.Pbloodgroup = new System.Windows.Forms.ComboBox();
+            this.Pphone = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewpatienGV)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -232,12 +232,12 @@
             this.label13.TabIndex = 24;
             this.label13.Text = "Blood Group";
             // 
-            // textBox4
+            // Paddress
             // 
-            this.textBox4.Location = new System.Drawing.Point(322, 232);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(276, 22);
-            this.textBox4.TabIndex = 23;
+            this.Paddress.Location = new System.Drawing.Point(322, 232);
+            this.Paddress.Name = "Paddress";
+            this.Paddress.Size = new System.Drawing.Size(276, 22);
+            this.Paddress.TabIndex = 23;
             // 
             // label12
             // 
@@ -259,12 +259,12 @@
             this.label11.TabIndex = 20;
             this.label11.Text = "Gender";
             // 
-            // textBox2
+            // Page
             // 
-            this.textBox2.Location = new System.Drawing.Point(660, 144);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(276, 22);
-            this.textBox2.TabIndex = 19;
+            this.Page.Location = new System.Drawing.Point(660, 144);
+            this.Page.Name = "Page";
+            this.Page.Size = new System.Drawing.Size(276, 22);
+            this.Page.TabIndex = 19;
             // 
             // label10
             // 
@@ -276,12 +276,12 @@
             this.label10.TabIndex = 18;
             this.label10.Text = "Age";
             // 
-            // textBox1
+            // Pname
             // 
-            this.textBox1.Location = new System.Drawing.Point(322, 144);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(276, 22);
-            this.textBox1.TabIndex = 17;
+            this.Pname.Location = new System.Drawing.Point(322, 144);
+            this.Pname.Name = "Pname";
+            this.Pname.Size = new System.Drawing.Size(276, 22);
+            this.Pname.TabIndex = 17;
             // 
             // label9
             // 
@@ -293,21 +293,21 @@
             this.label9.TabIndex = 16;
             this.label9.Text = "Name";
             // 
-            // comboBox2
+            // Pgender
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.Pgender.FormattingEnabled = true;
+            this.Pgender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox2.Location = new System.Drawing.Point(651, 232);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(276, 24);
-            this.comboBox2.TabIndex = 28;
+            this.Pgender.Location = new System.Drawing.Point(651, 232);
+            this.Pgender.Name = "Pgender";
+            this.Pgender.Size = new System.Drawing.Size(276, 24);
+            this.Pgender.TabIndex = 28;
             // 
-            // guna2DataGridView1
+            // ViewpatienGV
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.ViewpatienGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -315,9 +315,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.guna2DataGridView1.ColumnHeadersHeight = 4;
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.ViewpatienGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.ViewpatienGV.ColumnHeadersHeight = 4;
+            this.ViewpatienGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -325,36 +325,36 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(274, 341);
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.RowHeadersWidth = 51;
-            this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1094, 392);
-            this.guna2DataGridView1.TabIndex = 29;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.ViewpatienGV.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ViewpatienGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.ViewpatienGV.Location = new System.Drawing.Point(274, 341);
+            this.ViewpatienGV.Name = "ViewpatienGV";
+            this.ViewpatienGV.RowHeadersVisible = false;
+            this.ViewpatienGV.RowHeadersWidth = 51;
+            this.ViewpatienGV.RowTemplate.Height = 24;
+            this.ViewpatienGV.Size = new System.Drawing.Size(1094, 392);
+            this.ViewpatienGV.TabIndex = 29;
+            this.ViewpatienGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.ViewpatienGV.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.ViewpatienGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.ViewpatienGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.ViewpatienGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.ViewpatienGV.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.ViewpatienGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.ViewpatienGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.ViewpatienGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.ViewpatienGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewpatienGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.ViewpatienGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.ViewpatienGV.ThemeStyle.HeaderStyle.Height = 4;
+            this.ViewpatienGV.ThemeStyle.ReadOnly = false;
+            this.ViewpatienGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.ViewpatienGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.ViewpatienGV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewpatienGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.ViewpatienGV.ThemeStyle.RowsStyle.Height = 24;
+            this.ViewpatienGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.ViewpatienGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // button2
             // 
@@ -382,11 +382,11 @@
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // BloodGroupCmb
+            // Pbloodgroup
             // 
-            this.BloodGroupCmb.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BloodGroupCmb.FormattingEnabled = true;
-            this.BloodGroupCmb.Items.AddRange(new object[] {
+            this.Pbloodgroup.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pbloodgroup.FormattingEnabled = true;
+            this.Pbloodgroup.Items.AddRange(new object[] {
             "A+",
             "A-",
             "B+",
@@ -395,17 +395,17 @@
             "O-",
             "AB+",
             "AB-"});
-            this.BloodGroupCmb.Location = new System.Drawing.Point(1018, 232);
-            this.BloodGroupCmb.Name = "BloodGroupCmb";
-            this.BloodGroupCmb.Size = new System.Drawing.Size(285, 30);
-            this.BloodGroupCmb.TabIndex = 33;
+            this.Pbloodgroup.Location = new System.Drawing.Point(1018, 232);
+            this.Pbloodgroup.Name = "Pbloodgroup";
+            this.Pbloodgroup.Size = new System.Drawing.Size(285, 30);
+            this.Pbloodgroup.TabIndex = 33;
             // 
-            // PPhone
+            // Pphone
             // 
-            this.PPhone.Location = new System.Drawing.Point(1018, 144);
-            this.PPhone.Name = "PPhone";
-            this.PPhone.Size = new System.Drawing.Size(276, 22);
-            this.PPhone.TabIndex = 35;
+            this.Pphone.Location = new System.Drawing.Point(1018, 144);
+            this.Pphone.Name = "Pphone";
+            this.Pphone.Size = new System.Drawing.Size(276, 22);
+            this.Pphone.TabIndex = 35;
             // 
             // label15
             // 
@@ -423,32 +423,33 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1380, 758);
-            this.Controls.Add(this.PPhone);
+            this.Controls.Add(this.Pphone);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.BloodGroupCmb);
+            this.Controls.Add(this.Pbloodgroup);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.guna2DataGridView1);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.ViewpatienGV);
+            this.Controls.Add(this.Pgender);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.Paddress);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Page);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Pname);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewPatient";
             this.Text = "ViewPatient";
+            this.Load += new System.EventHandler(this.ViewPatient_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewpatienGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,19 +471,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox Paddress;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Page;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Pname;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private System.Windows.Forms.ComboBox Pgender;
+        private Guna.UI2.WinForms.Guna2DataGridView ViewpatienGV;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox BloodGroupCmb;
-        private System.Windows.Forms.TextBox PPhone;
+        private System.Windows.Forms.ComboBox Pbloodgroup;
+        private System.Windows.Forms.TextBox Pphone;
         private System.Windows.Forms.Label label15;
     }
 }

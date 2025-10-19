@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Blood_Bank_Managemant_System
 {
@@ -51,6 +52,34 @@ namespace Blood_Bank_Managemant_System
             Transfers transfers = new Transfers();
             transfers.Show();
             this.Hide();
+        }
+
+        private void ViewPatient_Load(object sender, EventArgs e)
+        {
+            LoadPatients();
+        }
+
+        private void LoadPatients()
+        {
+            try
+            {
+                Connection db = Connection.GetInstance();
+
+                using (SqlConnection conn = db.GetConnection())
+                {
+                    string query = "SELECT Pname, Page, Pphone, Paddress, Pgender, PBloodGroup FROM Patient";
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    ViewpatienGV.DataSource = dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(" Failed to load Patient data.\n" + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

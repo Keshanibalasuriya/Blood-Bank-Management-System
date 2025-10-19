@@ -96,5 +96,10 @@ namespace Blood_Bank_Managemant_System
         {
 
         }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
