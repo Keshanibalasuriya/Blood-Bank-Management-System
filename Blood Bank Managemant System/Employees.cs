@@ -201,5 +201,10 @@ namespace Blood_Bank_Managemant_System
                 Password.Text = row.Cells["Password"].Value.ToString();
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

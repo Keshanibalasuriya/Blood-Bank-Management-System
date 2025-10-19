@@ -10,7 +10,7 @@ namespace Blood_Bank_Managemant_System
 
         // Step 2: Connection string
         private readonly string connString =
-            "Data Source=LAPTOP-VTLPEAPH;Initial Catalog=BloodBankDB;Integrated Security=True;TrustServerCertificate=True;";
+      "Data Source=KALPANI\\SQLEXPRESS;Initial Catalog=BloodBankDB;Integrated Security=True;TrustServerCertificate=True;";
 
         // Step 3: Private constructor prevents creating object with 'new'
         private Connection() { }

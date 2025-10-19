@@ -46,3 +46,24 @@ E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Bl
 E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.AdminLogin.resources
 E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Employees.resources
 E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Patient.resources
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\bin\Debug\Blood Bank Managemant System.exe.config
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\bin\Debug\Blood Bank Managemant System.exe
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\bin\Debug\Blood Bank Managemant System.pdb
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\bin\Debug\Guna.UI2.dll
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.csproj.AssemblyReference.cache
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.AdminLogin.resources
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Donor.resources
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Employees.resources
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Login.resources
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.MainForm.resources
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Patient.resources
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Splash.resources
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Properties.Resources.resources
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.ViewDonor.resources
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.csproj.GenerateResource.cache
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.csproj.CoreCompileInputs.cache
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood Ba.09B79CBA.Up2Date
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.exe
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.pdb
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.BloodStock.resources
+C:\Users\kalpa\OneDrive\Desktop\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.exe.config
