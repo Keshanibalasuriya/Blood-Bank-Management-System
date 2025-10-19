@@ -186,6 +186,7 @@
             this.label2.Size = new System.Drawing.Size(113, 34);
             this.label2.TabIndex = 4;
             this.label2.Text = " Doner";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -408,7 +409,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-    //        this.Name = "Donor";
+            this.Name = "Donor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Donor";
             this.Load += new System.EventHandler(this.Donor_Load);

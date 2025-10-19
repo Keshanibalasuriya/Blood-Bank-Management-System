@@ -46,3 +46,23 @@ E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Bl
 E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.AdminLogin.resources
 E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Employees.resources
 E:\My work\Projects\Blood Bank Management System\Blood Bank Managemant System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Patient.resources
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\bin\Debug\Blood Bank Managemant System.exe.config
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\bin\Debug\Blood Bank Managemant System.exe
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\bin\Debug\Blood Bank Managemant System.pdb
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\bin\Debug\Guna.UI2.dll
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.csproj.AssemblyReference.cache
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.AdminLogin.resources
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Donor.resources
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Employees.resources
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Login.resources
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.MainForm.resources
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Patient.resources
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Splash.resources
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.Properties.Resources.resources
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.ViewDonor.resources
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood_Bank_Managemant_System.ViewPatient.resources
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.csproj.GenerateResource.cache
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.csproj.CoreCompileInputs.cache
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood Ba.09B79CBA.Up2Date
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.exe
+D:\C#\Blood-Bank-Management-System\Blood Bank Managemant System\obj\Debug\Blood Bank Managemant System.pdb
