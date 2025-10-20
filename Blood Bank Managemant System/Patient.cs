@@ -21,5 +21,10 @@ namespace Blood_Bank_Managemant_System
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -157,7 +157,7 @@ namespace Blood_Bank_Managemant_System
         private void label7_Click(object sender, EventArgs e)
         {
             this.Hide();
-            transfer_btn transfers = new transfer_btn();
+            Transfer transfers = new Transfer();
             transfers.Show();
         }
 

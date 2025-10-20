@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Donor));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -55,8 +56,10 @@
             this.label16 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.GenderCmb = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -216,7 +219,7 @@
             // NameTxt
             // 
             this.NameTxt.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameTxt.Location = new System.Drawing.Point(570, 120);
+            this.NameTxt.Location = new System.Drawing.Point(579, 206);
             this.NameTxt.Name = "NameTxt";
             this.NameTxt.Size = new System.Drawing.Size(431, 29);
             this.NameTxt.TabIndex = 3;
@@ -239,7 +242,7 @@
             this.label10.BackColor = System.Drawing.Color.White;
             this.label10.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Crimson;
-            this.label10.Location = new System.Drawing.Point(411, 127);
+            this.label10.Location = new System.Drawing.Point(420, 213);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(80, 27);
             this.label10.TabIndex = 14;
@@ -251,7 +254,7 @@
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Crimson;
-            this.label11.Location = new System.Drawing.Point(425, 190);
+            this.label11.Location = new System.Drawing.Point(434, 276);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(19, 27);
             this.label11.TabIndex = 15;
@@ -264,7 +267,7 @@
             this.label12.BackColor = System.Drawing.Color.White;
             this.label12.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Crimson;
-            this.label12.Location = new System.Drawing.Point(401, 186);
+            this.label12.Location = new System.Drawing.Point(410, 272);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(63, 27);
             this.label12.TabIndex = 16;
@@ -274,7 +277,7 @@
             // AgeTxt
             // 
             this.AgeTxt.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgeTxt.Location = new System.Drawing.Point(570, 188);
+            this.AgeTxt.Location = new System.Drawing.Point(579, 274);
             this.AgeTxt.Name = "AgeTxt";
             this.AgeTxt.Size = new System.Drawing.Size(431, 29);
             this.AgeTxt.TabIndex = 17;
@@ -285,7 +288,7 @@
             this.label13.BackColor = System.Drawing.Color.White;
             this.label13.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Crimson;
-            this.label13.Location = new System.Drawing.Point(401, 255);
+            this.label13.Location = new System.Drawing.Point(410, 341);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(107, 27);
             this.label13.TabIndex = 18;
@@ -297,7 +300,7 @@
             this.label14.BackColor = System.Drawing.Color.White;
             this.label14.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Crimson;
-            this.label14.Location = new System.Drawing.Point(401, 317);
+            this.label14.Location = new System.Drawing.Point(410, 403);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(135, 27);
             this.label14.TabIndex = 22;
@@ -306,7 +309,7 @@
             // PhoneNoTxt
             // 
             this.PhoneNoTxt.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneNoTxt.Location = new System.Drawing.Point(570, 318);
+            this.PhoneNoTxt.Location = new System.Drawing.Point(579, 404);
             this.PhoneNoTxt.Name = "PhoneNoTxt";
             this.PhoneNoTxt.Size = new System.Drawing.Size(431, 29);
             this.PhoneNoTxt.TabIndex = 21;
@@ -317,7 +320,7 @@
             this.label15.BackColor = System.Drawing.Color.White;
             this.label15.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Crimson;
-            this.label15.Location = new System.Drawing.Point(401, 420);
+            this.label15.Location = new System.Drawing.Point(410, 506);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(115, 27);
             this.label15.TabIndex = 24;
@@ -326,7 +329,7 @@
             // AddressTxt
             // 
             this.AddressTxt.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddressTxt.Location = new System.Drawing.Point(570, 382);
+            this.AddressTxt.Location = new System.Drawing.Point(579, 468);
             this.AddressTxt.Multiline = true;
             this.AddressTxt.Name = "AddressTxt";
             this.AddressTxt.Size = new System.Drawing.Size(431, 106);
@@ -345,7 +348,7 @@
             "O-",
             "AB+",
             "AB-"});
-            this.BloodGroupCmb.Location = new System.Drawing.Point(570, 524);
+            this.BloodGroupCmb.Location = new System.Drawing.Point(579, 610);
             this.BloodGroupCmb.Name = "BloodGroupCmb";
             this.BloodGroupCmb.Size = new System.Drawing.Size(431, 30);
             this.BloodGroupCmb.TabIndex = 26;
@@ -356,7 +359,7 @@
             this.label16.BackColor = System.Drawing.Color.White;
             this.label16.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Crimson;
-            this.label16.Location = new System.Drawing.Point(401, 523);
+            this.label16.Location = new System.Drawing.Point(410, 609);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(171, 27);
             this.label16.TabIndex = 25;
@@ -367,7 +370,7 @@
             this.button2.BackColor = System.Drawing.Color.Crimson;
             this.button2.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(763, 668);
+            this.button2.Location = new System.Drawing.Point(764, 668);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(246, 46);
             this.button2.TabIndex = 13;
@@ -383,10 +386,20 @@
             this.GenderCmb.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.GenderCmb.Location = new System.Drawing.Point(570, 256);
+            this.GenderCmb.Location = new System.Drawing.Point(579, 342);
             this.GenderCmb.Name = "GenderCmb";
             this.GenderCmb.Size = new System.Drawing.Size(431, 30);
             this.GenderCmb.TabIndex = 20;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(747, 120);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(58, 60);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 40;
+            this.pictureBox2.TabStop = false;
             // 
             // Donor
             // 
@@ -394,6 +407,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1380, 758);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.BloodGroupCmb);
             this.Controls.Add(this.label16);
@@ -421,6 +435,7 @@
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,5 +470,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox GenderCmb;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
