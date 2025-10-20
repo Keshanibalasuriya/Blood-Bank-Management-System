@@ -76,6 +76,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(264, 758);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -186,6 +187,7 @@
             this.label2.Size = new System.Drawing.Size(113, 34);
             this.label2.TabIndex = 4;
             this.label2.Text = " Doner";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -196,6 +198,7 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1116, 40);
             this.flowLayoutPanel1.TabIndex = 2;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // label1
             // 
@@ -208,6 +211,7 @@
             this.label1.Size = new System.Drawing.Size(790, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "                                                   Blood Bank Management System";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // NameTxt
             // 
@@ -408,7 +412,8 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-    //        this.Name = "Donor";
+            this.Name = "Donor";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Donor";
             this.Load += new System.EventHandler(this.Donor_Load);

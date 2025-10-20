@@ -124,6 +124,9 @@
     <EmbeddedResource Include="AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BloodStock.resx">
+      <DependentUpon>BloodStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Donor.resx">
       <DependentUpon>Donor.cs</DependentUpon>
     </EmbeddedResource>
