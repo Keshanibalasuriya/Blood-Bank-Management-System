@@ -6,8 +6,8 @@ namespace Blood_Bank_Managemant_System
 {
     public partial class BloodStock : Form
     {
-        private readonly string connString =
-            "Data Source=KALPANI\\SQLEXPRESS;Initial Catalog=BloodBankDB;Integrated Security=True;TrustServerCertificate=True;";
+        // Use your Connection class (no direct connString here)
+        private readonly Connection dbConnection = Connection.GetInstance();
 
         public BloodStock()
         {
@@ -25,7 +25,7 @@ namespace Blood_Bank_Managemant_System
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connString))
+                using (SqlConnection conn = dbConnection.GetConnection())
                 {
                     conn.Open();
 
@@ -60,11 +60,10 @@ namespace Blood_Bank_Managemant_System
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connString))
+                using (SqlConnection conn = dbConnection.GetConnection())
                 {
                     conn.Open();
 
-                    // Check current stock
                     int currentStock = GetBloodGroupCount(conn, bloodGroup);
                     if (currentStock < quantity)
                     {
@@ -72,7 +71,6 @@ namespace Blood_Bank_Managemant_System
                         return;
                     }
 
-                    // Delete donors equal to quantity (or mark as used)
                     using (SqlCommand cmd = new SqlCommand(
                         "DELETE TOP(@qty) FROM Donor WHERE BloodGroup = @bloodGroup", conn))
                     {
@@ -82,7 +80,6 @@ namespace Blood_Bank_Managemant_System
                         MessageBox.Show($"{rowsAffected} units of {bloodGroup} blood issued.");
                     }
 
-                    // Reload updated counts
                     LoadBloodStockCounts();
                 }
             }
@@ -92,11 +89,10 @@ namespace Blood_Bank_Managemant_System
             }
         }
 
-        // Example: issue blood button click
         private void IssueBloodButton_Click(object sender, EventArgs e)
         {
             string selectedGroup = comboBox1.Text;
-            int quantity = 1; // You can also get this from a textbox if issuing multiple units
+            int quantity = 1; // Example value
             if (!string.IsNullOrEmpty(selectedGroup))
             {
                 ReduceBloodStock(selectedGroup, quantity);
@@ -114,7 +110,7 @@ namespace Blood_Bank_Managemant_System
             {
                 try
                 {
-                    using (SqlConnection conn = new SqlConnection(connString))
+                    using (SqlConnection conn = dbConnection.GetConnection())
                     {
                         conn.Open();
                         int count = GetBloodGroupCount(conn, selectedGroup);
@@ -161,7 +157,7 @@ namespace Blood_Bank_Managemant_System
         private void label7_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Transfers transfers = new Transfers();
+            transfer_btn transfers = new transfer_btn();
             transfers.Show();
         }
 
@@ -181,11 +177,14 @@ namespace Blood_Bank_Managemant_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide(); 
+            this.Hide();
             Login login = new Login();
-            login.ShowDialog(); 
-            
+            login.ShowDialog();
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
