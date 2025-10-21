@@ -80,6 +80,7 @@
             this.button1.TabIndex = 11;
             this.button1.Text = " Logout";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 
@@ -152,6 +153,7 @@
             this.label3.Size = new System.Drawing.Size(208, 34);
             this.label3.TabIndex = 5;
             this.label3.Text = " View Donors";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 

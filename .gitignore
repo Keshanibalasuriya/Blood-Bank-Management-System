@@ -1,0 +1,12 @@
+.vs/
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+*.vsidx
+*.user
+*.suo
+*.dbmdl

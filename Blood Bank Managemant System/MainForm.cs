@@ -71,13 +71,14 @@ namespace Blood_Bank_Managemant_System
         {
             this.Hide();
             BloodStock bloodStock = new BloodStock();
-            bloodStock.Show();
+            bloodStock.Show(); 
         }
+
 
         private void label7_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Transfers transfers = new Transfers();
+            Transfer transfers = new Transfer();
             transfers.Show();
         }
 
