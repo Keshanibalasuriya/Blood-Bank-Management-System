@@ -1,3 +1,4 @@
+
 ﻿namespace Blood_Bank_Managemant_System
 {
     partial class Patient
@@ -28,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Patient));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -40,8 +42,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.PName = new System.Windows.Forms.TextBox();
+            this.PAge = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.PAddress = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PGender = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.PBloodgroup = new System.Windows.Forms.ComboBox();
+            this.PPhone = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,7 +98,6 @@
             this.button1.TabIndex = 11;
             this.button1.Text = " Logout";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 
@@ -105,6 +122,7 @@
             this.label7.Size = new System.Drawing.Size(156, 34);
             this.label7.TabIndex = 9;
             this.label7.Text = "Transfers";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -117,6 +135,7 @@
             this.label6.Size = new System.Drawing.Size(199, 34);
             this.label6.TabIndex = 8;
             this.label6.Text = " Blood Stock";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label4
             // 
@@ -129,6 +148,7 @@
             this.label4.Size = new System.Drawing.Size(216, 34);
             this.label4.TabIndex = 7;
             this.label4.Text = "View Patients";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -141,6 +161,7 @@
             this.label5.Size = new System.Drawing.Size(130, 34);
             this.label5.TabIndex = 6;
             this.label5.Text = " Patient";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label3
             // 
@@ -166,6 +187,7 @@
             this.label2.Size = new System.Drawing.Size(113, 34);
             this.label2.TabIndex = 4;
             this.label2.Text = " Doner";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -189,23 +211,192 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "                                                   Blood Bank Management System";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(339, 177);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 18);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Name";
+            // 
+            // PName
+            // 
+            this.PName.Location = new System.Drawing.Point(342, 196);
+            this.PName.Name = "PName";
+            this.PName.Size = new System.Drawing.Size(276, 22);
+            this.PName.TabIndex = 6;
+            this.PName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // PAge
+            // 
+            this.PAge.Location = new System.Drawing.Point(693, 196);
+            this.PAge.Name = "PAge";
+            this.PAge.Size = new System.Drawing.Size(276, 22);
+            this.PAge.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(690, 163);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(36, 18);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Age";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(690, 359);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(63, 18);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Gender";
+            // 
+            // PAddress
+            // 
+            this.PAddress.Location = new System.Drawing.Point(342, 368);
+            this.PAddress.Name = "PAddress";
+            this.PAddress.Size = new System.Drawing.Size(276, 22);
+            this.PAddress.TabIndex = 12;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(339, 349);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(69, 18);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Address";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(339, 470);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(104, 18);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "Blood Group";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(696, 80);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(111, 32);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Patient";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(1014, 400);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(326, 280);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
+            // PGender
+            // 
+            this.PGender.FormattingEnabled = true;
+            this.PGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.PGender.Location = new System.Drawing.Point(693, 380);
+            this.PGender.Name = "PGender";
+            this.PGender.Size = new System.Drawing.Size(276, 24);
+            this.PGender.TabIndex = 28;
+            // 
+            // button2
+            // 
+            this.button2.AutoEllipsis = true;
+            this.button2.BackColor = System.Drawing.Color.Silver;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ImageKey = "(none)";
+            this.button2.Location = new System.Drawing.Point(550, 619);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(176, 40);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // PBloodgroup
+            // 
+            this.PBloodgroup.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PBloodgroup.Items.AddRange(new object[] {
+            "A+",
+            "A-",
+            "B+",
+            "B-",
+            "O+",
+            "O-",
+            "AB+",
+            "AB-"});
+            this.PBloodgroup.Location = new System.Drawing.Point(342, 491);
+            this.PBloodgroup.Name = "PBloodgroup";
+            this.PBloodgroup.Size = new System.Drawing.Size(276, 30);
+            this.PBloodgroup.TabIndex = 31;
+            // 
+            // PPhone
+            // 
+            this.PPhone.Location = new System.Drawing.Point(1038, 198);
+            this.PPhone.Name = "PPhone";
+            this.PPhone.Size = new System.Drawing.Size(276, 22);
+            this.PPhone.TabIndex = 33;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(1035, 179);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(56, 18);
+            this.label15.TabIndex = 32;
+            this.label15.Text = "Phone";
+            // 
             // Patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1380, 758);
+            this.Controls.Add(this.PPhone);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.PBloodgroup);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.PGender);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.PAddress);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.PAge);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.PName);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Patient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Patient";
+            this.Load += new System.EventHandler(this.Patient_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -223,5 +414,20 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox PName;
+        private System.Windows.Forms.TextBox PAge;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox PAddress;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox PGender;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox PBloodgroup;
+        private System.Windows.Forms.TextBox PPhone;
+        private System.Windows.Forms.Label label15;
     }
 }

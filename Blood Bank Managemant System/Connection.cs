@@ -1,4 +1,5 @@
-﻿using System;
+
+using System;
 using System.Data.SqlClient;
 
 namespace Blood_Bank_Managemant_System
@@ -51,3 +52,4 @@ namespace Blood_Bank_Managemant_System
         }
     }
 }
+
