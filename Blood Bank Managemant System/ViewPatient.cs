@@ -49,7 +49,7 @@ namespace Blood_Bank_Managemant_System
 
         private void label7_Click(object sender, EventArgs e)
         {
-            Transfers transfers = new Transfers();
+            Transfer transfers = new Transfer();
             transfers.Show();
             this.Hide();
         }
