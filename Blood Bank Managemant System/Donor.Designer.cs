@@ -1,4 +1,4 @@
-﻿namespace Blood_Bank_Managemant_System
+namespace Blood_Bank_Managemant_System
 {
     partial class Donor
     {

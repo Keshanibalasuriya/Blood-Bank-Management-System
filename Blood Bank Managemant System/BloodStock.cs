@@ -6,9 +6,6 @@ namespace Blood_Bank_Managemant_System
 {
     public partial class BloodStock : Form
     {
-        // Use your Connection class (no direct connString here)
-        private readonly Connection dbConnection = Connection.GetInstance();
-
         public BloodStock()
         {
             InitializeComponent();
@@ -20,12 +17,12 @@ namespace Blood_Bank_Managemant_System
             // Already loading counts in constructor
         }
 
-        // Load all blood stock counts into textboxes
+        // ✅ Load all blood stock counts into textboxes
         private void LoadBloodStockCounts()
         {
             try
             {
-                using (SqlConnection conn = dbConnection.GetConnection())
+                using (SqlConnection conn = Connection.GetInstance().GetConnection())
                 {
                     conn.Open();
 
@@ -45,7 +42,7 @@ namespace Blood_Bank_Managemant_System
             }
         }
 
-        // Get count of a specific blood group
+        // ✅ Get count of a specific blood group
         private int GetBloodGroupCount(SqlConnection conn, string bloodGroup)
         {
             using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Donor WHERE BloodGroup = @bloodGroup", conn))
@@ -55,15 +52,16 @@ namespace Blood_Bank_Managemant_System
             }
         }
 
-        // Reduce stock for a blood group
+        // ✅ Reduce stock for a blood group
         private void ReduceBloodStock(string bloodGroup, int quantity)
         {
             try
             {
-                using (SqlConnection conn = dbConnection.GetConnection())
+                using (SqlConnection conn = Connection.GetInstance().GetConnection())
                 {
                     conn.Open();
 
+                    // Check current stock
                     int currentStock = GetBloodGroupCount(conn, bloodGroup);
                     if (currentStock < quantity)
                     {
@@ -71,6 +69,7 @@ namespace Blood_Bank_Managemant_System
                         return;
                     }
 
+                    // Delete donors equal to quantity (or mark as used)
                     using (SqlCommand cmd = new SqlCommand(
                         "DELETE TOP(@qty) FROM Donor WHERE BloodGroup = @bloodGroup", conn))
                     {
@@ -80,6 +79,7 @@ namespace Blood_Bank_Managemant_System
                         MessageBox.Show($"{rowsAffected} units of {bloodGroup} blood issued.");
                     }
 
+                    // Reload updated counts
                     LoadBloodStockCounts();
                 }
             }
@@ -89,10 +89,11 @@ namespace Blood_Bank_Managemant_System
             }
         }
 
+        // ✅ Example: issue blood button click
         private void IssueBloodButton_Click(object sender, EventArgs e)
         {
             string selectedGroup = comboBox1.Text;
-            int quantity = 1; // Example value
+            int quantity = 1; // You can also get this from a textbox if issuing multiple units
             if (!string.IsNullOrEmpty(selectedGroup))
             {
                 ReduceBloodStock(selectedGroup, quantity);
@@ -110,7 +111,7 @@ namespace Blood_Bank_Managemant_System
             {
                 try
                 {
-                    using (SqlConnection conn = dbConnection.GetConnection())
+                    using (SqlConnection conn = Connection.GetInstance().GetConnection())
                     {
                         conn.Open();
                         int count = GetBloodGroupCount(conn, selectedGroup);
@@ -124,7 +125,7 @@ namespace Blood_Bank_Managemant_System
             }
         }
 
-        // Navigation buttons
+        // ✅ Navigation buttons
         private void label4_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -180,11 +181,6 @@ namespace Blood_Bank_Managemant_System
             this.Hide();
             Login login = new Login();
             login.ShowDialog();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
