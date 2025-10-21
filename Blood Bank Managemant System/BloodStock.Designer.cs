@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+
 namespace Blood_Bank_Managemant_System
 {
     partial class BloodStock

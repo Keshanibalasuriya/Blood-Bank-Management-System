@@ -1,4 +1,5 @@
-﻿namespace Blood_Bank_Managemant_System
+﻿
+namespace Blood_Bank_Managemant_System
 {
     partial class Employees
     {
@@ -46,6 +47,7 @@
             this.Username = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
