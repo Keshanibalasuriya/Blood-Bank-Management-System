@@ -1,49 +1,46 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Blood_Bank_Managemant_System
 {
     public partial class Dashboard : Form
     {
-        // 🔗 SQL connection — update server name if needed
-        SqlConnection Con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=BloodBankDB;Integrated Security=True");
-
         public Dashboard()
         {
             InitializeComponent();
             LoadDashboardData();
             LoadBloodStock();
         }
+
+        // ✅ Load total counts for Donors, Patients, and Transfers
         private void LoadDashboardData()
         {
             try
             {
-                Con.Open();
+                using (SqlConnection conn = Connection.GetInstance().GetConnection())
+                {
+                    conn.Open();
 
-                // 🩸 Count Donors
-                SqlCommand cmdDonor = new SqlCommand("SELECT COUNT(*) FROM Donor", Con);
-                int donorCount = (int)cmdDonor.ExecuteScalar();
-                label12.Text = donorCount.ToString();
+                    //  Count Donors
+                    using (SqlCommand cmdDonor = new SqlCommand("SELECT COUNT(*) FROM Donor", conn))
+                    {
+                        label12.Text = ((int)cmdDonor.ExecuteScalar()).ToString();
+                    }
 
-                // 👥 Count Patients (employees)
-                SqlCommand cmdPatient = new SqlCommand("SELECT COUNT(*) FROM Patient", Con);
-                int patientCount = (int)cmdPatient.ExecuteScalar();
-                label14.Text = patientCount.ToString();
+                    //  Count Patients
+                    using (SqlCommand cmdPatient = new SqlCommand("SELECT COUNT(*) FROM Patient", conn))
+                    {
+                        label14.Text = ((int)cmdPatient.ExecuteScalar()).ToString();
+                    }
 
-                // 💉 Count Transfers (if you create that table later)
-                SqlCommand cmdTransfer = new SqlCommand("IF OBJECT_ID('Transfers', 'U') IS NOT NULL SELECT COUNT(*) FROM Transfers ELSE SELECT 0", Con);
-                int transferCount = (int)cmdTransfer.ExecuteScalar();
-                label13.Text = transferCount.ToString();
-
-                Con.Close();
+                    //  Count Transfers (if table exists)
+                    using (SqlCommand cmdTransfer = new SqlCommand(
+                        "IF OBJECT_ID('Transfers', 'U') IS NOT NULL SELECT COUNT(*) FROM Transfers ELSE SELECT 0", conn))
+                    {
+                        label13.Text = ((int)cmdTransfer.ExecuteScalar()).ToString();
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -51,85 +48,128 @@ namespace Blood_Bank_Managemant_System
             }
         }
 
+        //  Load blood stock levels into progress bars
         private void LoadBloodStock()
         {
-            string connectionString = "Data Source=YOUR_SERVER_NAME;Initial Catalog=BloodBankDB;Integrated Security=True";
-            using (SqlConnection con = new SqlConnection(connectionString))
+            try
             {
-                string query = "SELECT BloodGroup, BStock FROM BloodStock";
-                SqlCommand cmd = new SqlCommand(query, con);
-                con.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
+                using (SqlConnection conn = Connection.GetInstance().GetConnection())
                 {
-                    string group = reader["BloodGroup"].ToString();
-                    int stock = Convert.ToInt32(reader["BStock"]);
-
-                    switch (group)
+                    conn.Open();
+                    string query = "SELECT BloodGroup, BStock FROM BloodStock";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        case "O+":
-                            guna2CircleProgressBar1.Value = stock;
-                            guna2CircleProgressBar1.Text = stock.ToString();
-                            break;
+                        while (reader.Read())
+                        {
+                            string group = reader["BloodGroup"].ToString();
+                            int stock = Convert.ToInt32(reader["BStock"]);
 
-                        case "A+":
-                            guna2CircleProgressBar3.Value = stock;
-                            guna2CircleProgressBar3.Text = stock.ToString();
-                            break;
-                        case "B+":
-                            guna2CircleProgressBar4.Value = stock;
-                            guna2CircleProgressBar4.Text = stock.ToString();
-                            break;
+                            switch (group)
+                            {
+                                case "O+":
+                                    guna2CircleProgressBar1.Value = stock;
+                                    guna2CircleProgressBar1.Text = stock.ToString();
+                                    break;
 
-                        case "AB+":
-                            guna2CircleProgressBar2.Value = stock;
-                            guna2CircleProgressBar2.Text = stock.ToString();
-                            break;
+                                case "A+":
+                                    guna2CircleProgressBar3.Value = stock;
+                                    guna2CircleProgressBar3.Text = stock.ToString();
+                                    break;
 
-                        case "O-":
-                            guna2CircleProgressBar6.Value = stock;
-                            guna2CircleProgressBar6.Text = stock.ToString();
-                            break;
-                        
-                        case "AB-":
-                            guna2CircleProgressBar5.Value = stock;
-                            guna2CircleProgressBar5.Text = stock.ToString();
-                            break;
+                                case "B+":
+                                    guna2CircleProgressBar4.Value = stock;
+                                    guna2CircleProgressBar4.Text = stock.ToString();
+                                    break;
+
+                                case "AB+":
+                                    guna2CircleProgressBar2.Value = stock;
+                                    guna2CircleProgressBar2.Text = stock.ToString();
+                                    break;
+
+                                case "O-":
+                                    guna2CircleProgressBar6.Value = stock;
+                                    guna2CircleProgressBar6.Text = stock.ToString();
+                                    break;
+
+                                case "AB-":
+                                    guna2CircleProgressBar5.Value = stock;
+                                    guna2CircleProgressBar5.Text = stock.ToString();
+                                    break;
+                            }
+                        }
                     }
                 }
-
-                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading blood stock: " + ex.Message);
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        // Optional UI event handlers
+        private void Dashboard_Load(object sender, EventArgs e) { }
+        private void pictureBox1_Click(object sender, EventArgs e) { }
+        private void pictureBox2_Click(object sender, EventArgs e) { }
+        private void pictureBox3_Click(object sender, EventArgs e) { }
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e) { }
+        private void textBox2_TextChanged(object sender, EventArgs e) { }
+
+        private void label2_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Donor doner = new Donor(); 
+            doner.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ViewDonor view = new ViewDonor();
+            view.Show();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Patient patient = new Patient();
+            patient.Show();
 
         }
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
+            this.Hide();
+            ViewPatient viewPatient = new ViewPatient();
+            viewPatient.Show();
 
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void label6_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            BloodStock bloodStock = new BloodStock();
+            bloodStock.Show();
 
         }
 
-        private void Dashboard_Load(object sender, EventArgs e)
+        private void label7_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Transfer tr = new Transfer();
+            tr.Show();
+        }
 
+        private void label8_Click(object sender, EventArgs e)
+        {
+            this.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login lo = new Login();
+            lo.Show();
         }
     }
 }
