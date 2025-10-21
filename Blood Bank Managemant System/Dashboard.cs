@@ -20,6 +20,7 @@ namespace Blood_Bank_Managemant_System
         {
             InitializeComponent();
             LoadDashboardData();
+            LoadBloodStock();
         }
         private void LoadDashboardData()
         {
@@ -47,6 +48,57 @@ namespace Blood_Bank_Managemant_System
             catch (Exception ex)
             {
                 MessageBox.Show("Error loading dashboard data: " + ex.Message);
+            }
+        }
+
+        private void LoadBloodStock()
+        {
+            string connectionString = "Data Source=YOUR_SERVER_NAME;Initial Catalog=BloodBankDB;Integrated Security=True";
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                string query = "SELECT BloodGroup, BStock FROM BloodStock";
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string group = reader["BloodGroup"].ToString();
+                    int stock = Convert.ToInt32(reader["BStock"]);
+
+                    switch (group)
+                    {
+                        case "O+":
+                            guna2CircleProgressBar1.Value = stock;
+                            guna2CircleProgressBar1.Text = stock.ToString();
+                            break;
+
+                        case "A+":
+                            guna2CircleProgressBar3.Value = stock;
+                            guna2CircleProgressBar3.Text = stock.ToString();
+                            break;
+                        case "B+":
+                            guna2CircleProgressBar4.Value = stock;
+                            guna2CircleProgressBar4.Text = stock.ToString();
+                            break;
+
+                        case "AB+":
+                            guna2CircleProgressBar2.Value = stock;
+                            guna2CircleProgressBar2.Text = stock.ToString();
+                            break;
+
+                        case "O-":
+                            guna2CircleProgressBar6.Value = stock;
+                            guna2CircleProgressBar6.Text = stock.ToString();
+                            break;
+                        
+                        case "AB-":
+                            guna2CircleProgressBar5.Value = stock;
+                            guna2CircleProgressBar5.Text = stock.ToString();
+                            break;
+                    }
+                }
+
+                reader.Close();
             }
         }
 
