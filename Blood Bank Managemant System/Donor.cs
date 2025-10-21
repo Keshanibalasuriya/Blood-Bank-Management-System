@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -94,7 +94,7 @@ namespace Blood_Bank_Managemant_System
         private void label7_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Transfers transfers = new Transfers();
+            Transfer transfers = new Transfer();
             transfers.Show();
         }
 
@@ -165,12 +165,22 @@ namespace Blood_Bank_Managemant_System
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void NameTxt_TextChanged(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

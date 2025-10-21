@@ -1,4 +1,4 @@
-﻿namespace Blood_Bank_Managemant_System
+namespace Blood_Bank_Managemant_System
 {
     partial class ViewDonor
     {
@@ -169,7 +169,6 @@
             this.label3.Size = new System.Drawing.Size(208, 34);
             this.label3.TabIndex = 5;
             this.label3.Text = " View Donors";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -299,7 +298,6 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
             // 
             // ViewDonor
             // 

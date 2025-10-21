@@ -1,3 +1,4 @@
+
 ﻿namespace Blood_Bank_Managemant_System
 {
     partial class Patient

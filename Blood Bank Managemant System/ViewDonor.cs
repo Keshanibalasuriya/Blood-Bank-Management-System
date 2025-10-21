@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -74,7 +74,7 @@ namespace Blood_Bank_Managemant_System
         private void label7_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Transfers transfers = new Transfers();
+            Transfer transfers = new Transfer();
             transfers.Show();
         }
 
@@ -90,16 +90,6 @@ namespace Blood_Bank_Managemant_System
             this.Hide();
             Login login = new Login();
             login.Show();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
