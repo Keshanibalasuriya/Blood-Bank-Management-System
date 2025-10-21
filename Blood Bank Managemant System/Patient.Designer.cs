@@ -42,24 +42,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.PName = new System.Windows.Forms.TextBox();
             this.PAge = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.PAddress = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PGender = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.PBloodgroup = new System.Windows.Forms.ComboBox();
             this.PPhone = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -110,6 +111,7 @@
             this.label8.Size = new System.Drawing.Size(178, 34);
             this.label8.TabIndex = 10;
             this.label8.Text = "DashBoard";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -211,97 +213,28 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "                                                   Blood Bank Management System";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(339, 177);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 18);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Name";
-            // 
             // PName
             // 
-            this.PName.Location = new System.Drawing.Point(342, 196);
+            this.PName.Location = new System.Drawing.Point(658, 180);
             this.PName.Name = "PName";
-            this.PName.Size = new System.Drawing.Size(276, 22);
+            this.PName.Size = new System.Drawing.Size(313, 22);
             this.PName.TabIndex = 6;
             this.PName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // PAge
             // 
-            this.PAge.Location = new System.Drawing.Point(693, 196);
+            this.PAge.Location = new System.Drawing.Point(658, 231);
             this.PAge.Name = "PAge";
-            this.PAge.Size = new System.Drawing.Size(276, 22);
+            this.PAge.Size = new System.Drawing.Size(313, 22);
             this.PAge.TabIndex = 8;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(690, 163);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 18);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Age";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(690, 359);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 18);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Gender";
             // 
             // PAddress
             // 
-            this.PAddress.Location = new System.Drawing.Point(342, 368);
+            this.PAddress.Location = new System.Drawing.Point(658, 435);
+            this.PAddress.Multiline = true;
             this.PAddress.Name = "PAddress";
-            this.PAddress.Size = new System.Drawing.Size(276, 22);
+            this.PAddress.Size = new System.Drawing.Size(313, 107);
             this.PAddress.TabIndex = 12;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(339, 349);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 18);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "Address";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(339, 470);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(104, 18);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Blood Group";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(696, 80);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(111, 32);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Patient";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(1014, 400);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(326, 280);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
             // 
             // PGender
             // 
@@ -309,24 +242,10 @@
             this.PGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.PGender.Location = new System.Drawing.Point(693, 380);
+            this.PGender.Location = new System.Drawing.Point(658, 305);
             this.PGender.Name = "PGender";
-            this.PGender.Size = new System.Drawing.Size(276, 24);
+            this.PGender.Size = new System.Drawing.Size(313, 24);
             this.PGender.TabIndex = 28;
-            // 
-            // button2
-            // 
-            this.button2.AutoEllipsis = true;
-            this.button2.BackColor = System.Drawing.Color.Silver;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ImageKey = "(none)";
-            this.button2.Location = new System.Drawing.Point(550, 619);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 40);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // PBloodgroup
             // 
@@ -340,27 +259,137 @@
             "O-",
             "AB+",
             "AB-"});
-            this.PBloodgroup.Location = new System.Drawing.Point(342, 491);
+            this.PBloodgroup.Location = new System.Drawing.Point(720, 580);
             this.PBloodgroup.Name = "PBloodgroup";
-            this.PBloodgroup.Size = new System.Drawing.Size(276, 30);
+            this.PBloodgroup.Size = new System.Drawing.Size(251, 30);
             this.PBloodgroup.TabIndex = 31;
             // 
             // PPhone
             // 
-            this.PPhone.Location = new System.Drawing.Point(1038, 198);
+            this.PPhone.Location = new System.Drawing.Point(658, 364);
             this.PPhone.Name = "PPhone";
-            this.PPhone.Size = new System.Drawing.Size(276, 22);
+            this.PPhone.Size = new System.Drawing.Size(313, 22);
             this.PPhone.TabIndex = 33;
             // 
-            // label15
+            // pictureBox2
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(1035, 179);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(56, 18);
-            this.label15.TabIndex = 32;
-            this.label15.Text = "Phone";
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(765, 94);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(58, 60);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 41;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.White;
+            this.label16.Font = new System.Drawing.Font("Century Schoolbook", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Crimson;
+            this.label16.Location = new System.Drawing.Point(718, 43);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(153, 39);
+            this.label16.TabIndex = 42;
+            this.label16.Text = " Patient";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Crimson;
+            this.label14.Location = new System.Drawing.Point(503, 583);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(171, 27);
+            this.label14.TabIndex = 49;
+            this.label14.Text = " Blood Group";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.White;
+            this.label17.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Crimson;
+            this.label17.Location = new System.Drawing.Point(503, 467);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(115, 27);
+            this.label17.TabIndex = 48;
+            this.label17.Text = " Address";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.White;
+            this.label18.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Crimson;
+            this.label18.Location = new System.Drawing.Point(503, 364);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(135, 27);
+            this.label18.TabIndex = 47;
+            this.label18.Text = " Phone No";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.White;
+            this.label19.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Crimson;
+            this.label19.Location = new System.Drawing.Point(503, 302);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(107, 27);
+            this.label19.TabIndex = 46;
+            this.label19.Text = " Gender";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.White;
+            this.label20.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Crimson;
+            this.label20.Location = new System.Drawing.Point(503, 233);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(63, 27);
+            this.label20.TabIndex = 45;
+            this.label20.Text = " Age";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.White;
+            this.label21.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Crimson;
+            this.label21.Location = new System.Drawing.Point(527, 237);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(19, 27);
+            this.label21.TabIndex = 44;
+            this.label21.Text = " ";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.White;
+            this.label22.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Crimson;
+            this.label22.Location = new System.Drawing.Point(513, 174);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(80, 27);
+            this.label22.TabIndex = 43;
+            this.label22.Text = "Name";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Crimson;
+            this.button3.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(746, 681);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(225, 46);
+            this.button3.TabIndex = 50;
+            this.button3.TabStop = false;
+            this.button3.Text = " Add Patient";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Patient
             // 
@@ -368,21 +397,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1380, 758);
-            this.Controls.Add(this.PPhone);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.PBloodgroup);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.PGender);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.PPhone);
+            this.Controls.Add(this.PBloodgroup);
+            this.Controls.Add(this.PGender);
             this.Controls.Add(this.PAddress);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.PAge);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.PName);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -394,7 +424,7 @@
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,20 +444,21 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox PName;
         private System.Windows.Forms.TextBox PAge;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox PAddress;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox PGender;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox PBloodgroup;
         private System.Windows.Forms.TextBox PPhone;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button button3;
     }
 }

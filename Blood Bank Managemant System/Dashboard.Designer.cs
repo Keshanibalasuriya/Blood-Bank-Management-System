@@ -67,6 +67,9 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.guna2CircleProgressBar7 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -75,6 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -246,7 +250,7 @@
             this.guna2Panel1.Controls.Add(this.label12);
             this.guna2Panel1.Controls.Add(this.label9);
             this.guna2Panel1.Controls.Add(this.pictureBox1);
-            this.guna2Panel1.Location = new System.Drawing.Point(299, 160);
+            this.guna2Panel1.Location = new System.Drawing.Point(298, 207);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(328, 116);
             this.guna2Panel1.TabIndex = 8;
@@ -295,7 +299,7 @@
             this.guna2Panel2.Controls.Add(this.label13);
             this.guna2Panel2.Controls.Add(this.label10);
             this.guna2Panel2.Controls.Add(this.pictureBox2);
-            this.guna2Panel2.Location = new System.Drawing.Point(672, 160);
+            this.guna2Panel2.Location = new System.Drawing.Point(671, 207);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(318, 116);
             this.guna2Panel2.TabIndex = 9;
@@ -343,7 +347,7 @@
             this.guna2Panel3.Controls.Add(this.label14);
             this.guna2Panel3.Controls.Add(this.label11);
             this.guna2Panel3.Controls.Add(this.pictureBox3);
-            this.guna2Panel3.Location = new System.Drawing.Point(1031, 160);
+            this.guna2Panel3.Location = new System.Drawing.Point(1030, 207);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(309, 116);
             this.guna2Panel3.TabIndex = 10;
@@ -356,9 +360,10 @@
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(14, 73);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(122, 25);
+            this.label14.Size = new System.Drawing.Size(76, 25);
             this.label14.TabIndex = 11;
-            this.label14.Text = "Employees";
+            this.label14.Text = " Users";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label11
             // 
@@ -368,9 +373,9 @@
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(13, 13);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(172, 34);
+            this.label11.Size = new System.Drawing.Size(105, 34);
             this.label11.TabIndex = 10;
-            this.label11.Text = "Employees";
+            this.label11.Text = " Users";
             // 
             // pictureBox3
             // 
@@ -388,7 +393,7 @@
             // 
             this.textBox2.Font = new System.Drawing.Font("Century Schoolbook", 19.8F, System.Drawing.FontStyle.Bold);
             this.textBox2.ForeColor = System.Drawing.Color.Crimson;
-            this.textBox2.Location = new System.Drawing.Point(672, 296);
+            this.textBox2.Location = new System.Drawing.Point(671, 343);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(220, 47);
             this.textBox2.TabIndex = 11;
@@ -402,7 +407,7 @@
             this.guna2CircleProgressBar1.FillThickness = 10;
             this.guna2CircleProgressBar1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2CircleProgressBar1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(309, 421);
+            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(274, 468);
             this.guna2CircleProgressBar1.Minimum = 0;
             this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
             this.guna2CircleProgressBar1.ProgressThickness = 10;
@@ -417,7 +422,7 @@
             this.guna2CircleProgressBar2.FillThickness = 10;
             this.guna2CircleProgressBar2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2CircleProgressBar2.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleProgressBar2.Location = new System.Drawing.Point(476, 421);
+            this.guna2CircleProgressBar2.Location = new System.Drawing.Point(437, 468);
             this.guna2CircleProgressBar2.Minimum = 0;
             this.guna2CircleProgressBar2.Name = "guna2CircleProgressBar2";
             this.guna2CircleProgressBar2.ProgressThickness = 10;
@@ -432,7 +437,7 @@
             this.guna2CircleProgressBar3.FillThickness = 10;
             this.guna2CircleProgressBar3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2CircleProgressBar3.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleProgressBar3.Location = new System.Drawing.Point(637, 421);
+            this.guna2CircleProgressBar3.Location = new System.Drawing.Point(595, 468);
             this.guna2CircleProgressBar3.Minimum = 0;
             this.guna2CircleProgressBar3.Name = "guna2CircleProgressBar3";
             this.guna2CircleProgressBar3.ProgressThickness = 10;
@@ -447,7 +452,7 @@
             this.guna2CircleProgressBar4.FillThickness = 10;
             this.guna2CircleProgressBar4.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2CircleProgressBar4.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleProgressBar4.Location = new System.Drawing.Point(800, 421);
+            this.guna2CircleProgressBar4.Location = new System.Drawing.Point(750, 468);
             this.guna2CircleProgressBar4.Minimum = 0;
             this.guna2CircleProgressBar4.Name = "guna2CircleProgressBar4";
             this.guna2CircleProgressBar4.ProgressThickness = 10;
@@ -462,7 +467,7 @@
             this.guna2CircleProgressBar5.FillThickness = 10;
             this.guna2CircleProgressBar5.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2CircleProgressBar5.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleProgressBar5.Location = new System.Drawing.Point(977, 421);
+            this.guna2CircleProgressBar5.Location = new System.Drawing.Point(899, 468);
             this.guna2CircleProgressBar5.Minimum = 0;
             this.guna2CircleProgressBar5.Name = "guna2CircleProgressBar5";
             this.guna2CircleProgressBar5.ProgressThickness = 10;
@@ -477,7 +482,7 @@
             this.guna2CircleProgressBar6.FillThickness = 10;
             this.guna2CircleProgressBar6.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2CircleProgressBar6.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleProgressBar6.Location = new System.Drawing.Point(1160, 421);
+            this.guna2CircleProgressBar6.Location = new System.Drawing.Point(1049, 468);
             this.guna2CircleProgressBar6.Minimum = 0;
             this.guna2CircleProgressBar6.Name = "guna2CircleProgressBar6";
             this.guna2CircleProgressBar6.ProgressThickness = 10;
@@ -490,7 +495,7 @@
             // 
             this.textBox3.Font = new System.Drawing.Font("Century Schoolbook", 19.8F, System.Drawing.FontStyle.Bold);
             this.textBox3.ForeColor = System.Drawing.Color.Crimson;
-            this.textBox3.Location = new System.Drawing.Point(344, 368);
+            this.textBox3.Location = new System.Drawing.Point(309, 415);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(56, 47);
             this.textBox3.TabIndex = 14;
@@ -501,7 +506,7 @@
             // 
             this.textBox4.Font = new System.Drawing.Font("Century Schoolbook", 19.8F, System.Drawing.FontStyle.Bold);
             this.textBox4.ForeColor = System.Drawing.Color.Crimson;
-            this.textBox4.Location = new System.Drawing.Point(499, 368);
+            this.textBox4.Location = new System.Drawing.Point(460, 415);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(84, 47);
             this.textBox4.TabIndex = 15;
@@ -512,7 +517,7 @@
             // 
             this.textBox5.Font = new System.Drawing.Font("Century Schoolbook", 19.8F, System.Drawing.FontStyle.Bold);
             this.textBox5.ForeColor = System.Drawing.Color.Crimson;
-            this.textBox5.Location = new System.Drawing.Point(672, 368);
+            this.textBox5.Location = new System.Drawing.Point(630, 415);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(56, 47);
             this.textBox5.TabIndex = 16;
@@ -523,7 +528,7 @@
             // 
             this.textBox6.Font = new System.Drawing.Font("Century Schoolbook", 19.8F, System.Drawing.FontStyle.Bold);
             this.textBox6.ForeColor = System.Drawing.Color.Crimson;
-            this.textBox6.Location = new System.Drawing.Point(836, 368);
+            this.textBox6.Location = new System.Drawing.Point(786, 415);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(56, 47);
             this.textBox6.TabIndex = 17;
@@ -534,7 +539,7 @@
             // 
             this.textBox7.Font = new System.Drawing.Font("Century Schoolbook", 19.8F, System.Drawing.FontStyle.Bold);
             this.textBox7.ForeColor = System.Drawing.Color.Crimson;
-            this.textBox7.Location = new System.Drawing.Point(1003, 368);
+            this.textBox7.Location = new System.Drawing.Point(925, 415);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(81, 47);
             this.textBox7.TabIndex = 18;
@@ -545,12 +550,48 @@
             // 
             this.textBox8.Font = new System.Drawing.Font("Century Schoolbook", 19.8F, System.Drawing.FontStyle.Bold);
             this.textBox8.ForeColor = System.Drawing.Color.Crimson;
-            this.textBox8.Location = new System.Drawing.Point(1196, 368);
+            this.textBox8.Location = new System.Drawing.Point(1085, 415);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(56, 47);
             this.textBox8.TabIndex = 19;
             this.textBox8.Text = "O-";
             this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Century Schoolbook", 19.8F, System.Drawing.FontStyle.Bold);
+            this.textBox9.ForeColor = System.Drawing.Color.Crimson;
+            this.textBox9.Location = new System.Drawing.Point(1242, 415);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(56, 47);
+            this.textBox9.TabIndex = 20;
+            this.textBox9.Text = " A-";
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // guna2CircleProgressBar7
+            // 
+            this.guna2CircleProgressBar7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.guna2CircleProgressBar7.FillThickness = 10;
+            this.guna2CircleProgressBar7.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.guna2CircleProgressBar7.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleProgressBar7.Location = new System.Drawing.Point(1209, 468);
+            this.guna2CircleProgressBar7.Minimum = 0;
+            this.guna2CircleProgressBar7.Name = "guna2CircleProgressBar7";
+            this.guna2CircleProgressBar7.ProgressThickness = 10;
+            this.guna2CircleProgressBar7.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleProgressBar7.Size = new System.Drawing.Size(130, 130);
+            this.guna2CircleProgressBar7.TabIndex = 14;
+            this.guna2CircleProgressBar7.Text = "guna2CircleProgressBar7";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(750, 120);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(58, 60);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 41;
+            this.pictureBox4.TabStop = false;
             // 
             // Dashboard
             // 
@@ -558,6 +599,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1380, 758);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.guna2CircleProgressBar7);
+            this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
@@ -595,6 +639,7 @@
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -640,5 +685,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox9;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar7;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

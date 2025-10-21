@@ -87,8 +87,8 @@ namespace Blood_Bank_Managemant_System
         private void label8_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
+            Dashboard dashbd = new Dashboard();
+            dashbd.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

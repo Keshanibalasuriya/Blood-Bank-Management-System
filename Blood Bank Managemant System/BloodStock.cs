@@ -14,10 +14,9 @@ namespace Blood_Bank_Managemant_System
 
         private void BloodStock_Load(object sender, EventArgs e)
         {
-            // Already loading counts in constructor
         }
 
-        // ✅ Load all blood stock counts into textboxes
+        // Load blood stock directly from BloodStock table
         private void LoadBloodStockCounts()
         {
             try
@@ -26,14 +25,14 @@ namespace Blood_Bank_Managemant_System
                 {
                     conn.Open();
 
-                    textBox12.Text = GetBloodGroupCount(conn, "A+").ToString();
-                    textBox13.Text = GetBloodGroupCount(conn, "A-").ToString();
-                    textBox14.Text = GetBloodGroupCount(conn, "AB+").ToString();
-                    textBox16.Text = GetBloodGroupCount(conn, "AB-").ToString();
-                    textBox15.Text = GetBloodGroupCount(conn, "B+").ToString();
-                    textBox17.Text = GetBloodGroupCount(conn, "B-").ToString();
-                    textBox18.Text = GetBloodGroupCount(conn, "O+").ToString();
-                    textBox19.Text = GetBloodGroupCount(conn, "O-").ToString();
+                    textBox12.Text = GetBloodStock(conn, "A+").ToString();
+                    textBox13.Text = GetBloodStock(conn, "A-").ToString();
+                    textBox14.Text = GetBloodStock(conn, "AB+").ToString();
+                    textBox16.Text = GetBloodStock(conn, "AB-").ToString();
+                    textBox15.Text = GetBloodStock(conn, "B+").ToString();
+                    textBox17.Text = GetBloodStock(conn, "B-").ToString();
+                    textBox18.Text = GetBloodStock(conn, "O+").ToString();
+                    textBox19.Text = GetBloodStock(conn, "O-").ToString();
                 }
             }
             catch (Exception ex)
@@ -42,17 +41,18 @@ namespace Blood_Bank_Managemant_System
             }
         }
 
-        // ✅ Get count of a specific blood group
-        private int GetBloodGroupCount(SqlConnection conn, string bloodGroup)
+        //  Get stock from BloodStock table
+        private int GetBloodStock(SqlConnection conn, string bloodGroup)
         {
-            using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Donor WHERE BloodGroup = @bloodGroup", conn))
+            using (SqlCommand cmd = new SqlCommand("SELECT BStock FROM BloodStock WHERE BloodGroup = @bg", conn))
             {
-                cmd.Parameters.AddWithValue("@bloodGroup", bloodGroup);
-                return (int)cmd.ExecuteScalar();
+                cmd.Parameters.AddWithValue("@bg", bloodGroup);
+                object result = cmd.ExecuteScalar();
+                return result != null ? Convert.ToInt32(result) : 0;
             }
         }
 
-        // ✅ Reduce stock for a blood group
+        //  Reduce stock for a blood group
         private void ReduceBloodStock(string bloodGroup, int quantity)
         {
             try
@@ -61,25 +61,22 @@ namespace Blood_Bank_Managemant_System
                 {
                     conn.Open();
 
-                    // Check current stock
-                    int currentStock = GetBloodGroupCount(conn, bloodGroup);
+                    int currentStock = GetBloodStock(conn, bloodGroup);
                     if (currentStock < quantity)
                     {
                         MessageBox.Show($"Not enough stock for {bloodGroup}. Available: {currentStock}");
                         return;
                     }
 
-                    // Delete donors equal to quantity (or mark as used)
                     using (SqlCommand cmd = new SqlCommand(
-                        "DELETE TOP(@qty) FROM Donor WHERE BloodGroup = @bloodGroup", conn))
+                        "UPDATE BloodStock SET BStock = BStock - @qty WHERE BloodGroup = @bg", conn))
                     {
-                        cmd.Parameters.AddWithValue("@bloodGroup", bloodGroup);
                         cmd.Parameters.AddWithValue("@qty", quantity);
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        MessageBox.Show($"{rowsAffected} units of {bloodGroup} blood issued.");
+                        cmd.Parameters.AddWithValue("@bg", bloodGroup);
+                        cmd.ExecuteNonQuery();
                     }
 
-                    // Reload updated counts
+                    MessageBox.Show($"{quantity} units of {bloodGroup} blood issued.");
                     LoadBloodStockCounts();
                 }
             }
@@ -89,11 +86,12 @@ namespace Blood_Bank_Managemant_System
             }
         }
 
-        // ✅ Example: issue blood button click
+        //  Issue blood
         private void IssueBloodButton_Click(object sender, EventArgs e)
         {
             string selectedGroup = comboBox1.Text;
-            int quantity = 1; // You can also get this from a textbox if issuing multiple units
+            int quantity = 1; // or take from textbox if needed
+
             if (!string.IsNullOrEmpty(selectedGroup))
             {
                 ReduceBloodStock(selectedGroup, quantity);
@@ -114,8 +112,11 @@ namespace Blood_Bank_Managemant_System
                     using (SqlConnection conn = Connection.GetInstance().GetConnection())
                     {
                         conn.Open();
-                        int count = GetBloodGroupCount(conn, selectedGroup);
-                        MessageBox.Show($"{selectedGroup} Blood Stock : {count} units 😎");
+                        int count = GetBloodStock(conn, selectedGroup);
+                        MessageBox.Show($"Current stock for {selectedGroup}: {count} units.",
+                                        "Blood Stock Information",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
                     }
                 }
                 catch (Exception ex)
@@ -125,7 +126,7 @@ namespace Blood_Bank_Managemant_System
             }
         }
 
-        // ✅ Navigation buttons
+        // Navigation buttons (unchanged)
         private void label4_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -165,8 +166,8 @@ namespace Blood_Bank_Managemant_System
         private void label8_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
+            Dashboard dashbd = new Dashboard();
+            dashbd.Show();
         }
 
         private void label9_Click(object sender, EventArgs e)

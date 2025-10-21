@@ -124,5 +124,68 @@ namespace Blood_Bank_Managemant_System
         {
 
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Dashboard dashbd = new Dashboard();
+            dashbd.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            {
+                if (string.IsNullOrWhiteSpace(PName.Text) ||
+                    string.IsNullOrWhiteSpace(PAge.Text) ||
+                     string.IsNullOrWhiteSpace(PPhone.Text) ||
+                    string.IsNullOrWhiteSpace(PAddress.Text) ||
+                    PGender.SelectedIndex == -1 ||
+                    PBloodgroup.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please fill all fields.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                try
+                {
+                    using (SqlConnection conn = Connection.GetInstance().GetConnection())
+                    {
+                        conn.Open();
+
+                        string query = "INSERT INTO Patient (Pname, Page, Pphone, Paddress, Pgender, PBloodGroup) " +
+                                       "VALUES (@Pname, @Page, @Pphone, @Paddress, @Pgender,  @PBloodGroup)";
+
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@Pname", PName.Text.Trim());
+                            cmd.Parameters.AddWithValue("@Page", int.Parse(PAge.Text.Trim()));
+                            cmd.Parameters.AddWithValue("@Pphone", PPhone.Text.Trim());
+                            cmd.Parameters.AddWithValue("@Paddress", PAddress.Text.Trim());
+                            cmd.Parameters.AddWithValue("@Pgender", PGender.SelectedItem.ToString());
+                            cmd.Parameters.AddWithValue("@PBloodGroup", PBloodgroup.SelectedItem.ToString());
+
+
+
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        MessageBox.Show("Patient added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    // Clear fields
+                    PName.Clear();
+                    PAge.Clear();
+                    PPhone.Clear();
+                    PAddress.Clear();
+                    PGender.SelectedIndex = -1;
+                    PBloodgroup.SelectedIndex = -1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(" Error adding PAtient: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }

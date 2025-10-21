@@ -13,7 +13,7 @@ namespace Blood_Bank_Managemant_System
             LoadBloodStock();
         }
 
-        // ✅ Load total counts for Donors, Patients, and Transfers
+        //  Load total counts for Donors, Patients, and Transfers
         private void LoadDashboardData()
         {
             try
@@ -29,7 +29,7 @@ namespace Blood_Bank_Managemant_System
                     }
 
                     //  Count Patients
-                    using (SqlCommand cmdPatient = new SqlCommand("SELECT COUNT(*) FROM Patient", conn))
+                    using (SqlCommand cmdPatient = new SqlCommand("SELECT COUNT(*) FROM Users", conn))
                     {
                         label14.Text = ((int)cmdPatient.ExecuteScalar()).ToString();
                     }
@@ -95,6 +95,11 @@ namespace Blood_Bank_Managemant_System
                                 case "AB-":
                                     guna2CircleProgressBar5.Value = stock;
                                     guna2CircleProgressBar5.Text = stock.ToString();
+                                    break;
+
+                                case "A-":
+                                    guna2CircleProgressBar7.Value = stock;
+                                    guna2CircleProgressBar7.Text = stock.ToString();
                                     break;
                             }
                         }
@@ -170,6 +175,11 @@ namespace Blood_Bank_Managemant_System
             this.Hide();
             Login lo = new Login();
             lo.Show();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
