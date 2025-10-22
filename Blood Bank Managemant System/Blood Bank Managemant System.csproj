@@ -66,6 +66,12 @@
       <DependentUpon>BloodStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Donor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,12 +83,6 @@
     </Compile>
     <Compile Include="Employees.Designer.cs">
       <DependentUpon>Employees.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -116,12 +116,6 @@
     <Compile Include="Transfer.Designer.cs">
       <DependentUpon>Transfer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transfers1L.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transfers1L.Designer.cs">
-      <DependentUpon>Transfers1L.cs</DependentUpon>
-    </Compile>
     <Compile Include="ViewDonor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,14 +137,14 @@
     <EmbeddedResource Include="Connection.resx">
       <DependentUpon>Connection.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Donor.resx">
       <DependentUpon>Donor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employees.resx">
       <DependentUpon>Employees.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -175,9 +169,6 @@
     </Compile>
     <EmbeddedResource Include="Transfer.resx">
       <DependentUpon>Transfer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Transfers1L.resx">
-      <DependentUpon>Transfers1L.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewDonor.resx">
       <DependentUpon>ViewDonor.cs</DependentUpon>

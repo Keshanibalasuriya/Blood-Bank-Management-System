@@ -348,9 +348,9 @@ namespace Blood_Bank_Managemant_System
             "O-",
             "AB+",
             "AB-"});
-            this.BloodGroupCmb.Location = new System.Drawing.Point(579, 610);
+            this.BloodGroupCmb.Location = new System.Drawing.Point(618, 610);
             this.BloodGroupCmb.Name = "BloodGroupCmb";
-            this.BloodGroupCmb.Size = new System.Drawing.Size(431, 30);
+            this.BloodGroupCmb.Size = new System.Drawing.Size(392, 30);
             this.BloodGroupCmb.TabIndex = 26;
             // 
             // label16

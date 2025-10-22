@@ -48,8 +48,8 @@ namespace Blood_Bank_Managemant_System
                     {
 
                         this.Hide();
-                        MainForm mainform = new MainForm();
-                        mainform.Show();
+                        Dashboard dashbd = new Dashboard();
+                        dashbd.Show();
                     }
                     else
                     {

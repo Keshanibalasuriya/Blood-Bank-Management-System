@@ -81,5 +81,12 @@ namespace Blood_Bank_Managemant_System
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Dashboard dashbd = new Dashboard();
+            dashbd.Show();
+        }
     }
 }

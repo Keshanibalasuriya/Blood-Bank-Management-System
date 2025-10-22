@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -6,7 +7,6 @@ namespace Blood_Bank_Managemant_System
 {
     public partial class Transfer : Form
     {
-        // Singleton connection instance
         private readonly Connection conn = Connection.GetInstance();
 
         public Transfer()
@@ -14,8 +14,15 @@ namespace Blood_Bank_Managemant_System
             InitializeComponent();
         }
 
-        // Load all Patient IDs into ComboBox
+        // ✅ Load Patient IDs + Transfer Records on Form Load
         private void Transfer_Load(object sender, EventArgs e)
+        {
+            LoadPatients();
+            LoadTransferData();
+        }
+
+        // ✅ Load all patients into combo box
+        private void LoadPatients()
         {
             Pid_ComboBox.Items.Clear();
 
@@ -41,66 +48,7 @@ namespace Blood_Bank_Managemant_System
             }
         }
 
-
-        
-        // 🔹 Navigation labels and buttons
-        private void label2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Donor donor = new Donor();
-            donor.Show();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ViewDonor view = new ViewDonor();
-            view.Show();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Patient patient = new Patient();
-            patient.Show();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ViewPatient viewPatient = new ViewPatient();
-            viewPatient.Show();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            BloodStock bloodstock = new BloodStock();
-            bloodstock.Show();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("You are already in the Transfer page", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Login login = new Login();
-            login.Show();
-        }
-
-
-        // When a patient is selected from ComboBox
-
+        // ✅ When a patient is selected, load name & blood group + check stock
         private void Pid_ComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (Pid_ComboBox.SelectedIndex == -1) return;
@@ -127,22 +75,20 @@ namespace Blood_Bank_Managemant_System
                                 string patientName = reader["Pname"].ToString();
                                 bloodGroup = reader["PBloodGroup"].ToString();
 
-                                // Fill textboxes
                                 pNametxt.Text = patientName;
                                 bloodGrptxt.Text = bloodGroup;
 
-                                // ✅ Show a message box with patient details
-                                MessageBox.Show(
+                                /*MessageBox.Show(
                                     $"Patient Name: {patientName}\nBlood Group: {bloodGroup}",
                                     "Patient Details",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information
-                                );
+                                );*/
                             }
                         }
                     }
 
-                    // Check stock after closing reader
+                    // Check blood stock
                     string queryStock = "SELECT BStock FROM BloodStock WHERE BloodGroup = @bg";
                     using (SqlCommand cmdStock = new SqlCommand(queryStock, con))
                     {
@@ -171,9 +117,7 @@ namespace Blood_Bank_Managemant_System
             }
         }
 
-
-        // 🔹 Transfer button click — reduce blood stock by 1
-        
+        // Transfer blood to patient
         private void transferbtn_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(bloodGrptxt.Text))
@@ -188,42 +132,47 @@ namespace Blood_Bank_Managemant_System
                 {
                     con.Open();
 
-                    string updateQuery = "UPDATE BloodStock SET BStock = BStock - 1 WHERE BloodGroup = @bg AND BStock > 0";
-                    using (SqlCommand cmd = new SqlCommand(updateQuery, con))
+                    // 1️⃣ Check stock
+                    string checkQuery = "SELECT BStock FROM BloodStock WHERE BloodGroup = @bg";
+                    using (SqlCommand cmdCheck = new SqlCommand(checkQuery, con))
                     {
-                        cmd.Parameters.AddWithValue("@bg", bloodGrptxt.Text);
-                        int rowsAffected = cmd.ExecuteNonQuery();
+                        cmdCheck.Parameters.AddWithValue("@bg", bloodGrptxt.Text);
+                        int stock = Convert.ToInt32(cmdCheck.ExecuteScalar() ?? 0);
 
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Blood transfer successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            // Refresh stock display
-                            string queryStock = "SELECT BStock FROM BloodStock WHERE BloodGroup = @bg";
-                            using (SqlCommand cmdStock = new SqlCommand(queryStock, con))
-                            {
-                                cmdStock.Parameters.AddWithValue("@bg", bloodGrptxt.Text);
-                                int newStock = Convert.ToInt32(cmdStock.ExecuteScalar() ?? 0);
-
-                                if (newStock > 0)
-                                {
-                                    stockStatus.Text = $"Stock Available: {newStock}";
-                                    stockStatus.ForeColor = System.Drawing.Color.Green;
-                                }
-                                else
-                                {
-                                    stockStatus.Text = "Stock Not Available";
-                                    stockStatus.ForeColor = System.Drawing.Color.Red;
-                                    transferbtn.Enabled = false;
-                                }
-                            }
-                        }
-                        else
+                        if (stock <= 0)
                         {
                             MessageBox.Show("Transfer failed. No stock available.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            transferbtn.Enabled = false;
+                            return;
                         }
                     }
+
+                    // 2️⃣ Update BloodStock
+                    string updateQuery = "UPDATE BloodStock SET BStock = BStock - 1 WHERE BloodGroup = @bg";
+                    using (SqlCommand cmdUpdate = new SqlCommand(updateQuery, con))
+                    {
+                        cmdUpdate.Parameters.AddWithValue("@bg", bloodGrptxt.Text);
+                        cmdUpdate.ExecuteNonQuery();
+                    }
+
+                    // 3️⃣ Insert transfer record
+                    string insertQuery = "INSERT INTO Transfers (PatientID, PatientName, BloodGroup) VALUES (@pid, @pname, @bg)";
+                    using (SqlCommand cmdInsert = new SqlCommand(insertQuery, con))
+                    {
+                        cmdInsert.Parameters.AddWithValue("@pid", Pid_ComboBox.SelectedItem.ToString());
+                        cmdInsert.Parameters.AddWithValue("@pname", pNametxt.Text);
+                        cmdInsert.Parameters.AddWithValue("@bg", bloodGrptxt.Text);
+                        cmdInsert.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Blood transfer recorded successfully ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Refresh UI
+                    stockStatus.Text = "Transfer Completed";
+                    stockStatus.ForeColor = System.Drawing.Color.Blue;
+                    transferbtn.Enabled = false;
+
+                    // 🔄 Refresh table after transfer
+                    LoadTransferData();
                 }
             }
             catch (Exception ex)
@@ -231,5 +180,45 @@ namespace Blood_Bank_Managemant_System
                 MessageBox.Show("Error during transfer: " + ex.Message);
             }
         }
+
+        // ✅ Load all transfer records into DataGridView
+        private void LoadTransferData()
+        {
+            try
+            {
+                using (SqlConnection con = conn.GetConnection())
+                {
+                    con.Open();
+                    string query = "SELECT TransferID, PatientID, PatientName, BloodGroup, TransferDate FROM Transfers ORDER BY TransferDate DESC";
+                    using (SqlDataAdapter da = new SqlDataAdapter(query, con))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        guna2DataGridView1.DataSource = dt;
+
+                        // Optional styling
+                        guna2DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        guna2DataGridView1.ReadOnly = true;
+                        guna2DataGridView1.AllowUserToAddRows = false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading transfer data: " + ex.Message);
+            }
+        }
+
+        // Navigation buttons
+        private void label2_Click(object sender, EventArgs e) { this.Hide(); new Donor().Show(); }
+        private void label3_Click(object sender, EventArgs e) { this.Hide(); new ViewDonor().Show(); }
+        private void label5_Click(object sender, EventArgs e) { this.Hide(); new Patient().Show(); }
+        private void label4_Click(object sender, EventArgs e) { this.Hide(); new ViewPatient().Show(); }
+        private void label6_Click(object sender, EventArgs e) { this.Hide(); new BloodStock().Show(); }
+        private void label7_Click(object sender, EventArgs e) { MessageBox.Show("Already in Transfer page", "Info"); }
+        private void label8_Click(object sender, EventArgs e) { this.Hide(); new Dashboard().Show(); }
+        private void button1_Click(object sender, EventArgs e) { this.Hide(); new Login().Show(); }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
     }
 }
