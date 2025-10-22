@@ -14,11 +14,11 @@ namespace Blood_Bank_Managemant_System
             InitializeComponent();
         }
 
-        // ✅ Load Patient IDs + Transfer Records on Form Load
+        //  Load Patient IDs + Transfer Records on Form Load
         private void Transfer_Load(object sender, EventArgs e)
         {
             LoadPatients();
-            LoadTransferData();
+            LoadTransferData(); // Always load latest transfers (most recent first)
         }
 
         // ✅ Load all patients into combo box
@@ -72,18 +72,9 @@ namespace Blood_Bank_Managemant_System
                         {
                             if (reader.Read())
                             {
-                                string patientName = reader["Pname"].ToString();
+                                pNametxt.Text = reader["Pname"].ToString();
                                 bloodGroup = reader["PBloodGroup"].ToString();
-
-                                pNametxt.Text = patientName;
                                 bloodGrptxt.Text = bloodGroup;
-
-                                /*MessageBox.Show(
-                                    $"Patient Name: {patientName}\nBlood Group: {bloodGroup}",
-                                    "Patient Details",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information
-                                );*/
                             }
                         }
                     }
@@ -117,7 +108,7 @@ namespace Blood_Bank_Managemant_System
             }
         }
 
-        // Transfer blood to patient
+        //  Transfer blood to patient
         private void transferbtn_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(bloodGrptxt.Text))
@@ -132,7 +123,7 @@ namespace Blood_Bank_Managemant_System
                 {
                     con.Open();
 
-                    // 1️⃣ Check stock
+                    // Check stock
                     string checkQuery = "SELECT BStock FROM BloodStock WHERE BloodGroup = @bg";
                     using (SqlCommand cmdCheck = new SqlCommand(checkQuery, con))
                     {
@@ -146,7 +137,7 @@ namespace Blood_Bank_Managemant_System
                         }
                     }
 
-                    // 2️⃣ Update BloodStock
+                    // Update BloodStock (reduce by 1)
                     string updateQuery = "UPDATE BloodStock SET BStock = BStock - 1 WHERE BloodGroup = @bg";
                     using (SqlCommand cmdUpdate = new SqlCommand(updateQuery, con))
                     {
@@ -164,14 +155,14 @@ namespace Blood_Bank_Managemant_System
                         cmdInsert.ExecuteNonQuery();
                     }
 
-                    MessageBox.Show("Blood transfer recorded successfully ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Blood transfer recorded successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Refresh UI
                     stockStatus.Text = "Transfer Completed";
                     stockStatus.ForeColor = System.Drawing.Color.Blue;
                     transferbtn.Enabled = false;
 
-                    // 🔄 Refresh table after transfer
+                    // Refresh table to show newest first
                     LoadTransferData();
                 }
             }
@@ -181,7 +172,7 @@ namespace Blood_Bank_Managemant_System
             }
         }
 
-        // ✅ Load all transfer records into DataGridView
+        //  Load all transfer records (latest first)
         private void LoadTransferData()
         {
             try
@@ -189,14 +180,17 @@ namespace Blood_Bank_Managemant_System
                 using (SqlConnection con = conn.GetConnection())
                 {
                     con.Open();
-                    string query = "SELECT TransferID, PatientID, PatientName, BloodGroup, TransferDate FROM Transfers ORDER BY TransferDate DESC";
+
+                    // ORDER BY TransferID DESC → latest transfer first
+                    string query = "SELECT TransferID, PatientID, PatientName, BloodGroup, TransferDate FROM Transfers ORDER BY TransferID DESC";
+
                     using (SqlDataAdapter da = new SqlDataAdapter(query, con))
                     {
                         DataTable dt = new DataTable();
                         da.Fill(dt);
                         guna2DataGridView1.DataSource = dt;
 
-                        // Optional styling
+                        // Table styling
                         guna2DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         guna2DataGridView1.ReadOnly = true;
                         guna2DataGridView1.AllowUserToAddRows = false;
@@ -218,7 +212,6 @@ namespace Blood_Bank_Managemant_System
         private void label7_Click(object sender, EventArgs e) { MessageBox.Show("Already in Transfer page", "Info"); }
         private void label8_Click(object sender, EventArgs e) { this.Hide(); new Dashboard().Show(); }
         private void button1_Click(object sender, EventArgs e) { this.Hide(); new Login().Show(); }
-
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
     }
 }

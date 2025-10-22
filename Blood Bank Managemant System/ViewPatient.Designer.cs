@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -54,7 +54,7 @@
             this.Pgender = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.Pbloodgroup = new System.Windows.Forms.ComboBox();
+            this.PBloodGroup = new System.Windows.Forms.ComboBox();
             this.Pphone = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -298,34 +298,38 @@
             // button2
             // 
             this.button2.AutoEllipsis = true;
-            this.button2.BackColor = System.Drawing.Color.Crimson;
+            this.button2.BackColor = System.Drawing.Color.SeaGreen;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.ImageKey = "(none)";
             this.button2.Location = new System.Drawing.Point(568, 694);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 40);
+            this.button2.Size = new System.Drawing.Size(201, 52);
             this.button2.TabIndex = 31;
-            this.button2.Text = "Edit";
+            this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.AutoEllipsis = true;
             this.button3.BackColor = System.Drawing.Color.Crimson;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.ImageKey = "(none)";
             this.button3.Location = new System.Drawing.Point(799, 694);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(176, 40);
+            this.button3.Size = new System.Drawing.Size(191, 52);
             this.button3.TabIndex = 32;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Pbloodgroup
+            // PBloodGroup
             // 
-            this.Pbloodgroup.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pbloodgroup.FormattingEnabled = true;
-            this.Pbloodgroup.Items.AddRange(new object[] {
+            this.PBloodGroup.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PBloodGroup.FormattingEnabled = true;
+            this.PBloodGroup.Items.AddRange(new object[] {
             "A+",
             "A-",
             "B+",
@@ -334,10 +338,10 @@
             "O-",
             "AB+",
             "AB-"});
-            this.Pbloodgroup.Location = new System.Drawing.Point(1038, 645);
-            this.Pbloodgroup.Name = "Pbloodgroup";
-            this.Pbloodgroup.Size = new System.Drawing.Size(285, 30);
-            this.Pbloodgroup.TabIndex = 33;
+            this.PBloodGroup.Location = new System.Drawing.Point(1038, 645);
+            this.PBloodGroup.Name = "PBloodGroup";
+            this.PBloodGroup.Size = new System.Drawing.Size(285, 30);
+            this.PBloodGroup.TabIndex = 33;
             // 
             // Pphone
             // 
@@ -370,26 +374,26 @@
             // 
             // ViewpatienGV
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.ViewpatienGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ViewpatienGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.ViewpatienGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ViewpatienGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.ViewpatienGV.ColumnHeadersHeight = 4;
             this.ViewpatienGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ViewpatienGV.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ViewpatienGV.DefaultCellStyle = dataGridViewCellStyle6;
             this.ViewpatienGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.ViewpatienGV.Location = new System.Drawing.Point(274, 110);
             this.ViewpatienGV.Name = "ViewpatienGV";
@@ -419,6 +423,7 @@
             this.ViewpatienGV.ThemeStyle.RowsStyle.Height = 24;
             this.ViewpatienGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.ViewpatienGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.ViewpatienGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ViewpatienGV_CellContentClick);
             // 
             // ViewPatient
             // 
@@ -430,7 +435,7 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.Pphone);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.Pbloodgroup);
+            this.Controls.Add(this.PBloodGroup);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Pgender);
@@ -484,7 +489,7 @@
         private System.Windows.Forms.ComboBox Pgender;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox Pbloodgroup;
+        private System.Windows.Forms.ComboBox PBloodGroup;
         private System.Windows.Forms.TextBox Pphone;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;

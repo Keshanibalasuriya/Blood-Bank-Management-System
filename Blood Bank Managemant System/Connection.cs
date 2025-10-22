@@ -10,7 +10,7 @@ namespace Blood_Bank_Managemant_System
         private static Connection _instance;
 
         // Step 2: Connection string
-        private readonly string connString = "Data Source=LAPTOP-VTLPEAPH;Initial Catalog=BloodBankDB;Integrated Security=True;TrustServerCertificate=True;";
+        private readonly string connString = "Data Source=LAPTOP-VTLPEAPH;Initial Catalog=DB_BloodBank;Integrated Security=True;TrustServerCertificate=True;";
 
         //"Data Source=KALPANI\\SQLEXPRESS;Initial Catalog=BloodBankDB;Integrated Security=True;TrustServerCertificate=True;";
 

@@ -101,7 +101,7 @@ namespace Blood_Bank_Managemant_System
         private void label8_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MainForm mainForm = new MainForm();
+            Dashboard mainForm = new Dashboard();
             mainForm.Show();
         }
 
