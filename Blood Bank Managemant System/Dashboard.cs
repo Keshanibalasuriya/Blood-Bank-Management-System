@@ -181,5 +181,12 @@ namespace Blood_Bank_Managemant_System
         {
 
         }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BloodDonations bd = new BloodDonations();
+            bd.Show();
+        }
     }
 }

@@ -69,6 +69,7 @@ namespace Blood_Bank_Managemant_System
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -370,11 +371,11 @@ namespace Blood_Bank_Managemant_System
             this.label9.BackColor = System.Drawing.Color.Crimson;
             this.label9.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(46, 87);
+            this.label9.Location = new System.Drawing.Point(46, 39);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 34);
+            this.label9.Size = new System.Drawing.Size(114, 34);
             this.label9.TabIndex = 4;
-            this.label9.Text = " Doner";
+            this.label9.Text = " Donor";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label3
@@ -383,7 +384,7 @@ namespace Blood_Bank_Managemant_System
             this.label3.BackColor = System.Drawing.Color.Crimson;
             this.label3.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(46, 148);
+            this.label3.Location = new System.Drawing.Point(46, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(208, 34);
             this.label3.TabIndex = 5;
@@ -478,6 +479,7 @@ namespace Blood_Bank_Managemant_System
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Crimson;
+            this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label8);
@@ -502,6 +504,19 @@ namespace Blood_Bank_Managemant_System
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 41;
             this.pictureBox2.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Crimson;
+            this.label18.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(55, 156);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(163, 34);
+            this.label18.TabIndex = 57;
+            this.label18.Text = "Donations";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // BloodStock
             // 
@@ -574,5 +589,6 @@ namespace Blood_Bank_Managemant_System
         private Panel panel2;
         private Panel panel1;
         private PictureBox pictureBox2;
+        private Label label18;
     }
 }

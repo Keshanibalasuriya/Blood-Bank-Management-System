@@ -213,5 +213,12 @@ namespace Blood_Bank_Managemant_System
         private void label8_Click(object sender, EventArgs e) { this.Hide(); new Dashboard().Show(); }
         private void button1_Click(object sender, EventArgs e) { this.Hide(); new Login().Show(); }
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BloodDonations bloodDonation = new BloodDonations();
+            bloodDonation.Show();
+        }
     }
 }

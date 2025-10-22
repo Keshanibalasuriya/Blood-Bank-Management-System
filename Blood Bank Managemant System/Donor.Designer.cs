@@ -57,6 +57,7 @@ namespace Blood_Bank_Managemant_System
             this.button2 = new System.Windows.Forms.Button();
             this.GenderCmb = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -65,6 +66,7 @@ namespace Blood_Bank_Managemant_System
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Crimson;
+            this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label8);
@@ -84,7 +86,7 @@ namespace Blood_Bank_Managemant_System
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FloralWhite;
-            this.panel2.Location = new System.Drawing.Point(21, 111);
+            this.panel2.Location = new System.Drawing.Point(21, 40);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(19, 43);
             this.panel2.TabIndex = 12;
@@ -172,7 +174,7 @@ namespace Blood_Bank_Managemant_System
             this.label3.BackColor = System.Drawing.Color.Crimson;
             this.label3.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(38, 186);
+            this.label3.Location = new System.Drawing.Point(45, 115);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(208, 34);
             this.label3.TabIndex = 5;
@@ -185,11 +187,11 @@ namespace Blood_Bank_Managemant_System
             this.label2.BackColor = System.Drawing.Color.Crimson;
             this.label2.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(39, 120);
+            this.label2.Location = new System.Drawing.Point(46, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 34);
+            this.label2.Size = new System.Drawing.Size(114, 34);
             this.label2.TabIndex = 4;
-            this.label2.Text = " Doner";
+            this.label2.Text = " Donor";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // flowLayoutPanel1
@@ -401,6 +403,19 @@ namespace Blood_Bank_Managemant_System
             this.pictureBox2.TabIndex = 40;
             this.pictureBox2.TabStop = false;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Crimson;
+            this.label18.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(46, 188);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(163, 34);
+            this.label18.TabIndex = 57;
+            this.label18.Text = "Donations";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
+            // 
             // Donor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -444,7 +459,6 @@ namespace Blood_Bank_Managemant_System
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -471,5 +485,7 @@ namespace Blood_Bank_Managemant_System
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox GenderCmb;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label18;
     }
 }

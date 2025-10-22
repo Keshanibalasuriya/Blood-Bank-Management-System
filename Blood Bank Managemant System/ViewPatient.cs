@@ -202,5 +202,12 @@ namespace Blood_Bank_Managemant_System
             Pgender.SelectedIndex = -1; 
             PBloodGroup.SelectedIndex = -1;
         }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BloodDonations bd = new BloodDonations();
+            bd.Show();
         }
+    }
     }

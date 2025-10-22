@@ -59,6 +59,12 @@
     <Compile Include="AdminLogin.Designer.cs">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="BloodDonations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodDonations.Designer.cs">
+      <DependentUpon>BloodDonations.cs</DependentUpon>
+    </Compile>
     <Compile Include="BloodStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </Compile>
     <EmbeddedResource Include="AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodDonations.resx">
+      <DependentUpon>BloodDonations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BloodStock.resx">
       <DependentUpon>BloodStock.cs</DependentUpon>
