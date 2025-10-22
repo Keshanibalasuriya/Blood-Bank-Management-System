@@ -29,9 +29,9 @@ namespace Blood_Bank_Managemant_System
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewDonor));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -46,9 +46,25 @@ namespace Blood_Bank_Managemant_System
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SearchTxt = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.GenderCmb = new System.Windows.Forms.ComboBox();
+            this.AgeTxt = new System.Windows.Forms.TextBox();
+            this.NameTxt = new System.Windows.Forms.TextBox();
+            this.PhoneNoTxt = new System.Windows.Forms.TextBox();
+            this.AddressTxt = new System.Windows.Forms.TextBox();
+            this.BloodGroupCmb = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -178,9 +194,9 @@ namespace Blood_Bank_Managemant_System
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(39, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 34);
+            this.label2.Size = new System.Drawing.Size(114, 34);
             this.label2.TabIndex = 4;
-            this.label2.Text = " Doner";
+            this.label2.Text = " Donor";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // flowLayoutPanel1
@@ -211,11 +227,11 @@ namespace Blood_Bank_Managemant_System
             this.label10.BackColor = System.Drawing.Color.White;
             this.label10.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Crimson;
-            this.label10.Location = new System.Drawing.Point(299, 167);
+            this.label10.Location = new System.Drawing.Point(286, 170);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 27);
+            this.label10.Size = new System.Drawing.Size(237, 27);
             this.label10.TabIndex = 17;
-            this.label10.Text = "Name";
+            this.label10.Text = "Enter Donor Name";
             // 
             // label9
             // 
@@ -229,13 +245,14 @@ namespace Blood_Bank_Managemant_System
             this.label9.TabIndex = 16;
             this.label9.Text = " Doner List";
             // 
-            // textBox1
+            // SearchTxt
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(458, 160);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(431, 29);
-            this.textBox1.TabIndex = 15;
+            this.SearchTxt.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchTxt.Location = new System.Drawing.Point(587, 168);
+            this.SearchTxt.Name = "SearchTxt";
+            this.SearchTxt.Size = new System.Drawing.Size(373, 29);
+            this.SearchTxt.TabIndex = 15;
+            this.SearchTxt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pictureBox1
             // 
@@ -249,33 +266,33 @@ namespace Blood_Bank_Managemant_System
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.guna2DataGridView1.ColumnHeadersHeight = 4;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(286, 220);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1094, 408);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1094, 225);
             this.guna2DataGridView1.TabIndex = 19;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -298,6 +315,196 @@ namespace Blood_Bank_Managemant_System
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellClick);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Crimson;
+            this.label14.Location = new System.Drawing.Point(299, 592);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(135, 27);
+            this.label14.TabIndex = 35;
+            this.label14.Text = " Phone No";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Crimson;
+            this.label13.Location = new System.Drawing.Point(299, 551);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(107, 27);
+            this.label13.TabIndex = 34;
+            this.label13.Text = " Gender";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Crimson;
+            this.label12.Location = new System.Drawing.Point(299, 511);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(63, 27);
+            this.label12.TabIndex = 33;
+            this.label12.Text = " Age";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Crimson;
+            this.label11.Location = new System.Drawing.Point(445, 479);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(19, 27);
+            this.label11.TabIndex = 32;
+            this.label11.Text = " ";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.White;
+            this.label17.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Crimson;
+            this.label17.Location = new System.Drawing.Point(308, 472);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(80, 27);
+            this.label17.TabIndex = 31;
+            this.label17.Text = "Name";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.White;
+            this.label15.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Crimson;
+            this.label15.Location = new System.Drawing.Point(299, 643);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(115, 27);
+            this.label15.TabIndex = 36;
+            this.label15.Text = " Address";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.White;
+            this.label16.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Crimson;
+            this.label16.Location = new System.Drawing.Point(293, 704);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(171, 27);
+            this.label16.TabIndex = 37;
+            this.label16.Text = " Blood Group";
+            // 
+            // GenderCmb
+            // 
+            this.GenderCmb.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GenderCmb.FormattingEnabled = true;
+            this.GenderCmb.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.GenderCmb.Location = new System.Drawing.Point(458, 552);
+            this.GenderCmb.Name = "GenderCmb";
+            this.GenderCmb.Size = new System.Drawing.Size(431, 30);
+            this.GenderCmb.TabIndex = 40;
+            // 
+            // AgeTxt
+            // 
+            this.AgeTxt.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgeTxt.Location = new System.Drawing.Point(458, 512);
+            this.AgeTxt.Name = "AgeTxt";
+            this.AgeTxt.Size = new System.Drawing.Size(431, 29);
+            this.AgeTxt.TabIndex = 39;
+            // 
+            // NameTxt
+            // 
+            this.NameTxt.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameTxt.Location = new System.Drawing.Point(458, 470);
+            this.NameTxt.Name = "NameTxt";
+            this.NameTxt.Size = new System.Drawing.Size(431, 29);
+            this.NameTxt.TabIndex = 38;
+            // 
+            // PhoneNoTxt
+            // 
+            this.PhoneNoTxt.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneNoTxt.Location = new System.Drawing.Point(458, 593);
+            this.PhoneNoTxt.Name = "PhoneNoTxt";
+            this.PhoneNoTxt.Size = new System.Drawing.Size(431, 29);
+            this.PhoneNoTxt.TabIndex = 41;
+            // 
+            // AddressTxt
+            // 
+            this.AddressTxt.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddressTxt.Location = new System.Drawing.Point(458, 643);
+            this.AddressTxt.Multiline = true;
+            this.AddressTxt.Name = "AddressTxt";
+            this.AddressTxt.Size = new System.Drawing.Size(431, 48);
+            this.AddressTxt.TabIndex = 42;
+            // 
+            // BloodGroupCmb
+            // 
+            this.BloodGroupCmb.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BloodGroupCmb.FormattingEnabled = true;
+            this.BloodGroupCmb.Items.AddRange(new object[] {
+            "A+",
+            "A-",
+            "B+",
+            "B-",
+            "O+",
+            "O-",
+            "AB+",
+            "AB-"});
+            this.BloodGroupCmb.Location = new System.Drawing.Point(497, 705);
+            this.BloodGroupCmb.Name = "BloodGroupCmb";
+            this.BloodGroupCmb.Size = new System.Drawing.Size(392, 30);
+            this.BloodGroupCmb.TabIndex = 43;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SeaGreen;
+            this.button2.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(964, 612);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(301, 46);
+            this.button2.TabIndex = 44;
+            this.button2.TabStop = false;
+            this.button2.Text = "Update Donor";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Crimson;
+            this.button3.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(964, 681);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(301, 46);
+            this.button3.TabIndex = 45;
+            this.button3.TabStop = false;
+            this.button3.Text = "Delete Donor";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Goldenrod;
+            this.button4.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(992, 159);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(301, 46);
+            this.button4.TabIndex = 47;
+            this.button4.TabStop = false;
+            this.button4.Text = "Search Donor";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // ViewDonor
             // 
@@ -305,11 +512,27 @@ namespace Blood_Bank_Managemant_System
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1380, 758);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.BloodGroupCmb);
+            this.Controls.Add(this.AddressTxt);
+            this.Controls.Add(this.PhoneNoTxt);
+            this.Controls.Add(this.GenderCmb);
+            this.Controls.Add(this.AgeTxt);
+            this.Controls.Add(this.NameTxt);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.SearchTxt);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -344,8 +567,24 @@ namespace Blood_Bank_Managemant_System
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SearchTxt;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox GenderCmb;
+        private System.Windows.Forms.TextBox AgeTxt;
+        private System.Windows.Forms.TextBox NameTxt;
+        private System.Windows.Forms.TextBox PhoneNoTxt;
+        private System.Windows.Forms.TextBox AddressTxt;
+        private System.Windows.Forms.ComboBox BloodGroupCmb;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
