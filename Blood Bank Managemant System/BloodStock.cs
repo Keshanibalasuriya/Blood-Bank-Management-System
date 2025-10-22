@@ -183,5 +183,12 @@ namespace Blood_Bank_Managemant_System
             Login login = new Login();
             login.ShowDialog();
         }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BloodDonations bloodDonation = new BloodDonations();
+            bloodDonation.Show();
+        }
     }
 }

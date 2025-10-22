@@ -70,6 +70,7 @@
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.guna2CircleProgressBar7 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -106,6 +107,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Crimson;
+            this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label8);
@@ -212,7 +214,7 @@
             this.label3.BackColor = System.Drawing.Color.Crimson;
             this.label3.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(42, 186);
+            this.label3.Location = new System.Drawing.Point(41, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(208, 34);
             this.label3.TabIndex = 5;
@@ -225,11 +227,11 @@
             this.label2.BackColor = System.Drawing.Color.Crimson;
             this.label2.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(39, 120);
+            this.label2.Location = new System.Drawing.Point(38, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 34);
+            this.label2.Size = new System.Drawing.Size(114, 34);
             this.label2.TabIndex = 4;
-            this.label2.Text = " Doner";
+            this.label2.Text = " Donor";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox1
@@ -593,6 +595,19 @@
             this.pictureBox4.TabIndex = 41;
             this.pictureBox4.TabStop = false;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Crimson;
+            this.label18.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(46, 186);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(163, 34);
+            this.label18.TabIndex = 57;
+            this.label18.Text = "Donations";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -688,5 +703,6 @@
         private System.Windows.Forms.TextBox textBox9;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar7;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label18;
     }
 }
