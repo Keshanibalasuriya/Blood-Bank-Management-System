@@ -2,7 +2,9 @@
 -- DATABASE: Blood Bank Management System
 -- ========================================================
 
--- Create the database
+-- Create the databa
+
+
 CREATE DATABASE DB_BloodBank;
 GO
 
